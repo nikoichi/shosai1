@@ -1,0 +1,2 @@
+BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
+index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController

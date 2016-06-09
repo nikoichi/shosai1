@@ -3,7 +3,7 @@
   <div class="recommendation-content">
     <div class="recommendation-header">
       <a class="recommendation-link link-hover-blue" href="#">
-        <strong class="recommendation-title">新着図書高評価の本【総合評価】</strong>
+        <strong class="recommendation-title"> -新着- 高評価の本【総合評価】</strong>
         <span class="recommendation-detail">›ランキングを見る</span>
       </a>
       <div class="dropdown recommendation-right-dropdown">
@@ -20,9 +20,9 @@
         </ul>
       </div>
     </div>
-    <% array1 = Array.new(5) %>
-    <% array1.each do %>
+    <% @recommendation_books_new.each do |book|%>
       <div class="show-book1">
+        <%= image_tag("#{book.book_img_url}") %>
       </div>
     <% end %>
   </div>
@@ -31,7 +31,7 @@
   <div class="recommendation-content">
     <div class="recommendation-header">
       <a class="recommendation-link link-hover-blue" href="#">
-        <strong class="recommendation-title">全図書高評価の本【総合評価】</strong>
+        <strong class="recommendation-title">高評価の本【総合評価】</strong>
         <span class="recommendation-detail">›ランキングを見る</span>
       </a>
       <div class="dropdown recommendation-right-dropdown">
@@ -48,9 +48,9 @@
         </ul>
       </div>
     </div>
-    <% array1 = Array.new(5) %>
-    <% array1.each do %>
+    <% @recommendation_books_all.each do |book|%>
       <div class="show-book1">
+        <%= image_tag("#{book.book_img_url}") %>
       </div>
     <% end %>
   </div>
@@ -78,9 +78,9 @@
         </ul>
       </div>
     </div>
-    <% array1 = Array.new(5) %>
-    <% array1.each do %>
+    <% @recommendation_books_generation.each do |book|%>
       <div class="show-book1">
+        <%= image_tag("#{book.book_img_url}") %>
       </div>
     <% end %>
   </div>
