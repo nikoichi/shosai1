@@ -21,8 +21,8 @@
       </div>
     </div>
     <% @recommendation_books_new.each do |book|%>
-      <div class="book_image1">
-        <%= image_tag("#{book.book_img_url}") %>
+      <div class="book_image_box1">
+        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
       </div>
     <% end %>
   </div>
@@ -49,8 +49,8 @@
       </div>
     </div>
     <% @recommendation_books_all.each do |book|%>
-      <div class="book_image1">
-        <%= image_tag("#{book.book_img_url}") %>
+      <div class="book_image_box1">
+        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
       </div>
     <% end %>
   </div>
@@ -79,8 +79,8 @@
       </div>
     </div>
     <% @recommendation_books_generation.each do |book|%>
-      <div class="book_image1">
-        <%= image_tag("#{book.book_img_url}") %>
+      <div class="book_image_box1">
+        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
       </div>
     <% end %>
   </div>

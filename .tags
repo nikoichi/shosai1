@@ -1,5 +1,3 @@
-BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
-index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
 body	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^body {$/;"	function	line:2
 h1,h2,h3,h4,h5,h6,p	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^h1,h2,h3,h4,h5,h6,p {$/;"	function	line:8
 .link-hover-blue:hover	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.link-hover-blue:hover{$/;"	function	line:14
@@ -8,33 +6,37 @@ header	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/style
 .shosainav	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.shosainav{$/;"	function	line:37
 .left-nav	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav{$/;"	function	line:48
 .header-top-link	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-top-link{$/;"	function	line:53
-.header-top-link > a	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-top-link > a{$/;"	function	line:58
-.header-top-link a:hover	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-top-link a:hover{$/;"	function	line:68
-.header-top-link >a .text	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-top-link >a .text {$/;"	function	line:72
-.left-nav > div	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav > div{$/;"	function	line:79
-.left-nav-search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search{$/;"	function	line:83
-.left-nav-search > div	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search > div{$/;"	function	line:87
-.left-nav-search > button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search > button{$/;"	function	line:93
-#left-nav-input	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^#left-nav-input{$/;"	function	line:99
-.right-nav	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav{$/;"	function	line:105
-.right-nav-list	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list{$/;"	function	line:110
-.right-nav-list > li	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list > li{$/;"	function	line:115
-.right-nav-list > li > a	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list > li > a{$/;"	function	line:120
-.right-nav-list > li > a:hover	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list > li > a:hover{$/;"	function	line:130
-.right-nav-list > li > a .text	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list > li > a .text {$/;"	function	line:134
-.header-prof-img	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-prof-img{$/;"	function	line:140
-.hedder-dropdown	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.hedder-dropdown{$/;"	function	line:146
-footer	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^footer {$/;"	function	line:150
-.contents	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.contents {$/;"	function	line:157
-.recommendation-content	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-content {$/;"	function	line:166
-.recommendation-header	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-header{$/;"	function	line:174
-.recommendation-link	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-link{$/;"	function	line:180
-.recommendation-detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-detail{$/;"	function	line:185
-.recommendation-right-dropdown	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-right-dropdown{$/;"	function	line:190
-.recommendation-right-dropdown > a	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-right-dropdown > a{$/;"	function	line:196
-.book_image1	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_image1{$/;"	function	line:200
-.book-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book-title{$/;"	function	line:209
-.book_info_detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_detail{$/;"	function	line:213
-.book_info_left	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_left{$/;"	function	line:220
-.book_image2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_image2{$/;"	function	line:228
-.book_info_right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_right{$/;"	function	line:236
+.header-link	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-link{$/;"	function	line:58
+.shosai-text	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.shosai-text{$/;"	function	line:69
+.header-link:hover	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-link:hover{$/;"	function	line:75
+.left-nav > div	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav > div{$/;"	function	line:81
+.left-nav-search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search{$/;"	function	line:85
+.left-nav-search > div	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search > div{$/;"	function	line:89
+.left-nav-search > button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.left-nav-search > button{$/;"	function	line:95
+#left-nav-input	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^#left-nav-input{$/;"	function	line:101
+.right-nav	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav{$/;"	function	line:107
+.right-nav-list	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list{$/;"	function	line:112
+.right-nav-list > li	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.right-nav-list > li{$/;"	function	line:117
+.header-prof-img	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-prof-img{$/;"	function	line:122
+.hedder-dropdown	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.hedder-dropdown{$/;"	function	line:130
+footer	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^footer {$/;"	function	line:134
+.contents	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.contents {$/;"	function	line:141
+.recommendation-content	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-content {$/;"	function	line:150
+.recommendation-header	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-header{$/;"	function	line:158
+.recommendation-link	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-link{$/;"	function	line:164
+.recommendation-detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-detail{$/;"	function	line:169
+.recommendation-right-dropdown	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-right-dropdown{$/;"	function	line:174
+.recommendation-right-dropdown > a	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.recommendation-right-dropdown > a{$/;"	function	line:180
+.book_image_box1	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_image_box1{$/;"	function	line:184
+.book-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book-title{$/;"	function	line:193
+.book_info_detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_detail{$/;"	function	line:197
+.book_info_left	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_left{$/;"	function	line:204
+.book_image_box2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_image_box2{$/;"	function	line:212
+.book_image2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_image2{$/;"	function	line:220
+.book_info_right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book_info_right{$/;"	function	line:226
+.reviews-container	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.reviews-container{$/;"	function	line:234
+.review-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.review-rate{$/;"	function	line:242
+.book-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book-rate{$/;"	function	line:248
+.book-review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.book-review{$/;"	function	line:256
+.review-titles-container	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.review-titles-container{$/;"	function	line:264
+.review-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.review-title{$/;"	function	line:272

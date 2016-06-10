@@ -55,25 +55,27 @@ header{
   height: 46px;
 }
 
-.header-top-link > a{
+.header-link{
   display: block;
   line-height: 1;
   height: 46px;
-  padding: 0 8px;
+  padding: 16.5px 8px;
+  text-decoration: none;
   color: inherit;
   font-size: 13px;
+  font-weight: 500;
+}
+
+.shosai-text{
+  padding: 14px 8px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.header-top-link a:hover{
+.header-link:hover{
   opacity:0.7;
-}
-
-.header-top-link >a .text {
-  display: block;
-  float: left;
-  padding: 14px 0;
-  font-size: 18px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .left-nav > div{
@@ -117,31 +119,13 @@ header{
   height: 46px;
 }
 
-.right-nav-list > li > a{
-  display: block;
-  line-height: 1;
-  height: 46px;
-  padding: 0 8px;
-  color: inherit;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.right-nav-list > li > a:hover{
-  opacity:0.7;
-}
-
-.right-nav-list > li > a .text {
-  display: block;
-  float: left;
-  padding: 16.5px 0;
-}
-
 .header-prof-img{
   float: left;
+  transform: translateY(-16.5px);
   height: 40px;
   border-radius: 4px;
   margin: 3px;
+  padding: 0;
 }
 .hedder-dropdown{
   transform: translateY(-10px);
@@ -158,7 +142,7 @@ footer {
   width: 950px;
   min-height: 950px;
   margin: 0 auto;
-  padding: 56px 10px 10px 10px;
+  padding: 56px 10px 15px 10px;
   background-image: url("和紙白2.jpg");
   // background-color:rgba(255,255,255,1.0);
   box-shadow: 3px 10px 10px 8px  rgba(0,0,0,0.4);
@@ -197,7 +181,7 @@ footer {
   vertical-align: middle;
 }
 
-.book_image1{
+.book_image_box1{
   float: left;
   height: 200px;
   width: 160px;
@@ -225,12 +209,18 @@ footer {
   background-color: black;
 }
 
-.book_image2{
+.book_image_box2{
+  position: relative;
   float: left;
   height: 300px;
   width: 240px;
-  // margin: 5px 20px;
-  background-color: blue;
+  background-color: rgba(255,255,255,1.0);
+}
+
+.book_image2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .book_info_right{
@@ -239,4 +229,48 @@ footer {
   width: 550px;
   margin: 5px 10px;
   background-color: black;
+}
+
+.reviews-container{
+  float: left;
+  width: 600px;
+  min-height: 900px;
+  margin: 15px 0 0 35px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.review-rate{
+  min-height: 150px;//後で変更
+  margin: 10px;
+  background-color: black;//後で変更
+}
+
+.book-rate{
+  float: left;
+  width: 180px;
+  min-height: 150px;//後で変更
+  margin: 5px;
+  background-color: white;//後で変更
+}
+
+.book-review{
+  float: left;
+  width: 380px;
+  min-height: 150px;//後で変更
+  margin: 5px;
+  background-color: white;//後で変更
+}
+
+.review-titles-container{
+  float: left;
+  width: 240px;
+  min-height: 600px;
+  margin: 15px 0 0 20px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.review-title{
+  min-height: 30px;//後で変更
+  margin: 10px;
+  background-color: black;//後で変更
 }
