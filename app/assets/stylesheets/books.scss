@@ -1,13 +1,15 @@
+// リセットCSS
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
 // 共通
 body {
-  margin: 0 auto;
   background-image: url('木目1-2.png');
-  font-size: 14px;
-  color: #333;
-}
-h1,h2,h3,h4,h5,h6,p {
-  margin: 0;
-  padding: 10px 0;
 }
 
 // 多用しそう
@@ -134,143 +136,4 @@ header{
 footer {
   min-width: 890px;
   height:28px;
-}
-
-
-// コンテンツ index
-.contents {
-  width: 950px;
-  min-height: 950px;
-  margin: 0 auto;
-  padding: 56px 10px 15px 10px;
-  background-image: url("和紙白2.jpg");
-  // background-color:rgba(255,255,255,1.0);
-  box-shadow: 3px 10px 10px 8px  rgba(0,0,0,0.4);
-}
-.recommendation-content {
-  width: 860px;
-  height: 250px;
-  margin: 15px auto;
-  background-color:rgba(255,255,255,0.7);
-}
-
-// おすすめコンテンツひとつ分
-.recommendation-header{
-  height: 35px;
-  margin: 0px 10px;
-  padding: 10px 0 0 0 ;
-  border-bottom:solid 2px gray;
-}
-.recommendation-link{
-  color: black;
-  font-size: 16px;
-  text-decoration: none;
-}
-.recommendation-detail{
-  color: gray;
-  font-size: 14px;
-}
-
-.recommendation-right-dropdown{
-  float: right;
-  z-index: 100;
-  opacity: 0.92;
-  font-size: 14px;
-}
-.recommendation-right-dropdown > a{
-  vertical-align: middle;
-}
-
-.book_image_box1{
-  float: left;
-  height: 200px;
-  width: 160px;
-  margin: 5px 0 0 10px;
-  background-color: black;
-}
-
-// showファイル作成時追加
-.book-title{
-  padding: 10px 20px;
-}
-
-.book_info_detail{
-  width: 860px;
-  min-height: 410px;
-  margin: 15px auto;
-  background-color:rgba(255,255,255,0.7);
-}
-
-.book_info_left{
-  float: left;
-  height: 350px;
-  width: 240px;
-  margin: 5px 20px;
-  background-color: black;
-}
-
-.book_image_box2{
-  position: relative;
-  float: left;
-  height: 300px;
-  width: 240px;
-  background-color: rgba(255,255,255,1.0);
-}
-
-.book_image2{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-.book_info_right{
-  float: left;
-  height: 350px;
-  width: 550px;
-  margin: 5px 10px;
-  background-color: black;
-}
-
-.reviews-container{
-  float: left;
-  width: 600px;
-  min-height: 900px;
-  margin: 15px 0 0 35px;
-  background-color:rgba(255,255,255,0.7);
-}
-
-.review-rate{
-  min-height: 150px;//後で変更
-  margin: 10px;
-  background-color: black;//後で変更
-}
-
-.book-rate{
-  float: left;
-  width: 180px;
-  min-height: 150px;//後で変更
-  margin: 5px;
-  background-color: white;//後で変更
-}
-
-.book-review{
-  float: left;
-  width: 380px;
-  min-height: 150px;//後で変更
-  margin: 5px;
-  background-color: white;//後で変更
-}
-
-.review-titles-container{
-  float: left;
-  width: 240px;
-  min-height: 600px;
-  margin: 15px 0 0 20px;
-  background-color:rgba(255,255,255,0.7);
-}
-
-.review-title{
-  min-height: 30px;//後で変更
-  margin: 10px;
-  background-color: black;//後で変更
 }

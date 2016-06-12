@@ -1,0 +1,87 @@
+// showファイル作成時追加
+.book-title{
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.book_info_detail{
+  width: 860px;
+  min-height: 410px;
+  margin: 15px auto;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.book_info_left{
+  float: left;
+  height: 350px;
+  width: 240px;
+  margin: 5px 20px;
+  background-color: black;
+}
+
+.book_image_box2{
+  position: relative;
+  float: left;
+  height: 300px;
+  width: 240px;
+  background-color: rgba(255,255,255,1.0);
+}
+
+.book_image2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.book_info_right{
+  float: left;
+  height: 350px;
+  width: 550px;
+  margin: 5px 10px;
+  background-color: black;
+}
+
+.reviews-container{
+  float: left;
+  width: 600px;
+  min-height: 900px;
+  margin: 15px 0 0 35px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.review-rate{
+  min-height: 150px;//後で変更
+  margin: 10px;
+  background-color: black;//後で変更
+}
+
+.book-rate{
+  float: left;
+  width: 180px;
+  min-height: 150px;//後で変更
+  margin: 5px;
+  background-color: white;//後で変更
+}
+
+.book-review{
+  float: left;
+  width: 380px;
+  min-height: 150px;//後で変更
+  margin: 5px;
+  background-color: white;//後で変更
+}
+
+.review-titles-container{
+  float: left;
+  width: 240px;
+  min-height: 600px;
+  margin: 15px 0 0 20px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.review-title{
+  min-height: 30px;//後で変更
+  margin: 10px;
+  background-color: black;//後で変更
+}

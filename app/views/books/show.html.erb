@@ -1,6 +1,6 @@
 <div class="contents clearfix">
   <div class="book_info_detail">
-    <h4 class="book-title"><%= @book.book_title %></h4>
+    <h2 class="book-title"><%= @book.book_title %></h2>
     <div class="book_info_left">
       <div class="book_image_box2">
         <%= image_tag("#{@book.book_img_url}", :class =>"book_image2") %>
@@ -13,7 +13,7 @@
   </div>
 
   <div class="reviews-container">
-    <h5>◆評価・レビュー</h5>
+    <h4>◆評価・レビュー</h4>
     <div class="review-rate clearfix">
       <% reviews = Array.new(5) %>
       <% reviews.each do |review| %>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="review-titles-container">
-    <h5>レビュー一覧</h5>
+    <h4>レビュー一覧</h4>
     <% reviews.each do |review| %>
       <div class="review-title">
 
