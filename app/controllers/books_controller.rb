@@ -10,4 +10,8 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
+
+  def search
+    @books = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+  end
 end

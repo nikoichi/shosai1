@@ -5,14 +5,14 @@
   font-weight: bold;
 }
 
-.book_info_detail{
+.book-info-detail{
   width: 860px;
   min-height: 410px;
   margin: 15px auto;
   background-color:rgba(255,255,255,0.7);
 }
 
-.book_info_left{
+.book-info-left{
   float: left;
   height: 350px;
   width: 240px;
@@ -20,7 +20,7 @@
   background-color: black;
 }
 
-.book_image_box2{
+.book-image-box2{
   position: relative;
   float: left;
   height: 300px;
@@ -28,13 +28,13 @@
   background-color: rgba(255,255,255,1.0);
 }
 
-.book_image2{
+.book-image2{
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.book_info_right{
+.book-info-right{
   float: left;
   height: 350px;
   width: 550px;
