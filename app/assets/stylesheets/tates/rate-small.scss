@@ -1,0 +1,75 @@
+//レート評価 変数
+$starFull-small: 16px;//星1個の幅
+$starHalf-small: $starFull-small / 2;//星半分（0.5）の幅
+$starSpace-small: 1px; //星同士の間隔
+
+$rate-small10: $starFull-small;//星1
+$rate-small15: $starFull-small + $starHalf-small + $starSpace-small;//星1.5
+$rate-small20: $starFull-small * 2 + $starSpace-small;//星2
+$rate-small25: ($starFull-small * 2) + $starHalf-small + $starSpace-small * 2;//星2.5
+$rate-small30: $starFull-small * 3 + $starSpace-small * 2;//星3
+$rate-small35: ($starFull-small * 3) + $starHalf-small + $starSpace-small * 3;//星3.5
+$rate-small40: $starFull-small * 4 + $starSpace-small * 3;//星4
+$rate-small45: ($starFull-small * 4) + $starHalf-small + $starSpace-small * 4;//星4.5
+$rate-small50 :$starFull-small * 5 + $starSpace-small * 4;//星5 (後半は[letter-spacing: 2px;]4回分の意味)
+
+.rate-small{
+  position: relative;
+  display: inline-block;
+  width: $starFull-small * 5+ $starSpace-small * 4;
+  height: $starFull-small;
+  font-size: $starFull-small;
+  &:before,&:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '★★★★★';
+    display: inline-block;
+    height: $starFull-small;
+    line-height: $starFull-small;
+    letter-spacing: $starSpace-small;
+  }
+  &:before{
+  color: #ddd;
+  }
+  &:after{
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;//これがないと改行されて星の半分（0.5）が表現できなくなる
+  }
+}
+.rate-small0:after{//星0
+  width: 0;
+}
+.rate-small10:after{//星1
+  width: $rate-small10;
+}
+.rate-small15:after{//星1.5
+  width: $rate-small15;
+}
+.rate-small20:after{//星2
+  width: $rate-small20;
+}
+.rate-small25:after{//星2.5
+  width: $rate-small25;
+}
+.rate-small30:after{//星3
+  width: $rate-small30;
+}
+.rate-small35:after{//星3.5
+  width: $rate-small35;
+}
+.rate-small40:after{//星4
+  width: $rate-small40;
+}
+.rate-small45:after{//星4.5
+  width: $rate-small45;
+}
+.rate-small50:after{//星5
+  width: $rate-small50;
+}
+
+.wrap{
+  width: 80px;
+  margin: 0 auto;
+}

@@ -17,15 +17,14 @@
   height: 350px;
   width: 240px;
   margin: 5px 20px;
-  background-color: black;
+  background-color: rgba(255,255,255,1.0);
 }
 
 .book-image-box2{
   position: relative;
-  float: left;
-  height: 300px;
+  height: 310px;
   width: 240px;
-  background-color: rgba(255,255,255,1.0);
+  // background-color: rgba(255,255,255,1.0);
 }
 
 .book-image2{
@@ -84,4 +83,25 @@
   min-height: 30px;//後で変更
   margin: 10px;
   background-color: black;//後で変更
+}
+
+// 総合評価の表示
+.show-overall-rate{
+  height: 40px;
+  width: 240px;
+}
+
+.show-overall-rate-star{
+  float: left;
+  height: 40px;
+  width: 165px;
+  padding: 8px 6px 8px 31px;
+}
+
+.show-overall-rate-val{
+  float: left;
+  height: 40px;
+  width: 75px;
+  font-size: 28px;
+  font-weight: bold;
 }

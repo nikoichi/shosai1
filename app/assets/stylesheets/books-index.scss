@@ -47,5 +47,27 @@
   height: 200px;
   width: 160px;
   margin: 5px 0 0 10px;
-  background-color: black;
+  background-color: white;
+}
+
+// トップページへの評価の表示
+.show-top-rate{
+  height: 40px;
+  width: 160px;
+}
+
+.show-top-rate-star{
+  float: left;
+  height: 40px;
+  width: 110px;
+  padding: 12px 4px 12px 20px;
+}
+
+.show-top-rate-val{
+  float: left;
+  height: 40px;
+  width: 50px;
+  padding: 8px 0;
+  font-size: 18px;
+  // font-weight: bold;
 }

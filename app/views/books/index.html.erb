@@ -23,6 +23,16 @@
     <% @recommendation_books_new.each do |book|%>
       <div class="book-image-box1">
         <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
+        <!-- レートの星と数字の表示 -->
+        <div class="show-top-rate">
+          <div class="show-top-rate-star">
+            <span class="rate-small rate-small30"></span>
+          </div>
+          <div class="show-top-rate-val">
+            <span class="">3.0</span>
+          </div>
+        </div>
+
       </div>
     <% end %>
   </div>
@@ -51,6 +61,16 @@
     <% @recommendation_books_all.each do |book|%>
       <div class="book-image-box1">
         <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
+        <!-- レートの星と数字の表示 -->
+        <div class="show-top-rate">
+          <div class="show-top-rate-star">
+            <span class="rate-small rate-small30"></span>
+          </div>
+          <div class="show-top-rate-val">
+            <span class="">3.0</span>
+          </div>
+        </div>
+
       </div>
     <% end %>
   </div>
@@ -81,6 +101,16 @@
     <% @recommendation_books_generation.each do |book|%>
       <div class="book-image-box1">
         <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
+        <!-- レートの星と数字の表示 -->
+        <div class="show-top-rate">
+          <div class="show-top-rate-star">
+            <span class="rate-small rate-small30"></span>
+          </div>
+          <div class="show-top-rate-val">
+            <span class="">3.0</span>
+          </div>
+        </div>
+        
       </div>
     <% end %>
   </div>
