@@ -20,84 +20,93 @@
 
     </div>
   </div>
+  <%= form_for [@book] do |f| %>
   <div class="rate-contribute">
     <h3 class="book-title">評価</h3>
     <div class="basic-rate-contribute">
       <h4 class="rate-title">基本評価</h4>
       <dl class="basic-rate">
         <dt>総合評価</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :overall_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
         <dt>人生を変えた本</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
         <dt>学びを得られた本</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
         <dt>共感できた本</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
         <dt>面白い本</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
         <dt>感動した本</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 0.5, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
     </div>
+
     <div class="generation-rate-contribute">
       <h4 class="rate-title">世代別おすすめ度評価</h4>
       <dl class="generation-rate">
         <dt>小学生以下</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>中学生</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>高校生</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>大学生</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>社会人(~20代)</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>社会人(30代、40代)</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>社会人(50代~)</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="generation-rate">
         <dt>退職後</dt>
-        <dd>5</dd>
+        <dd><%= f.number_field :rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-
     </div>
 
     <div class="trouble-rate-contribute">
       <h4 class="rate-title">悩み評価</h4>
-      
 
     </div>
   </div>
 
   <div class="new-review-contribute clearfix">
     <h3 class="book-title">レビュー投稿</h3>
+    <div class="" style="margin: 0 20px">
+      <%= f.text_field :review_title, placeholder: 'レビューの見出しを記入', value:'',style: 'width: 100%', maxlength:100 %>
+    </div>
+    <div class="" style="margin: 10px 20px">
+      <%= f.text_area :review, placeholder: 'レビューを記入',value:'', style: 'width: 100%;height: 300px;resize: none;' %>
+      <%= button_tag type: "submit", class: "review-contribute-button" do %>
+        <span>投稿する</span>
+      <% end %>
+    </div>
 
   </div>
-
+  <% end %>
 
 
 

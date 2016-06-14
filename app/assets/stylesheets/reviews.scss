@@ -1,3 +1,4 @@
+
 .rate-contribute{
   width: 860px;
   min-height: 360px;
@@ -5,10 +6,10 @@
   background-color:rgba(255,255,255,0.7);
 }
 
-
+//各評価外枠
 .basic-rate-contribute{
   float: left;
-  width: 270px;
+  width: 260px;
   height: 310px;
   margin: 0 10px 10px 20px;
   background-color:rgba(255,255,255,0.7);
@@ -16,7 +17,7 @@
 
 .generation-rate-contribute{
   float: left;
-  width: 240px;
+  width: 260px;
   height: 310px;
   margin: 0px 10px 10px 10px ;
   background-color:rgba(255,255,255,0.7);
@@ -24,7 +25,7 @@
 
 .trouble-rate-contribute{
   float: left;
-  width: 270px;
+  width: 260px;
   height: 310px;
   margin: 0 20px 10px 10px;
   background-color:rgba(255,255,255,0.7);
@@ -36,10 +37,11 @@
   font-weight: bold;
 }
 
+// 基本評価
 .basic-rate{
   display: table;
-  margin: 10px 10px;
-  width: 250px;
+  margin: 6px 10px;
+  width: 240px;
   font-size: 16px;
 }
 
@@ -55,10 +57,11 @@
   text-align: right;
 }
 
+// 世代別評価
 .generation-rate{
   display: table;
-  margin: 10px 10px;
-  width: 220px;
+  margin: 6px 10px;
+  width: 240px;
   font-size: 16px;
 }
 
@@ -74,11 +77,18 @@
   text-align: right;
 }
 
-
-
+// レビュー
 .new-review-contribute{
   width: 860px;
   min-height: 410px;
   margin: 15px auto;
   background-color:rgba(255,255,255,0.7);
+}
+
+.review-contribute-button{
+  height: 30px;
+  width: 120px;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
 }

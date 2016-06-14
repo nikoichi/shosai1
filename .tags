@@ -93,15 +93,16 @@ rate-small50	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets
 .show-top-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate{$/;"	function	line:54
 .show-top-rate-star	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate-star{$/;"	function	line:59
 .show-top-rate-val	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate-val{$/;"	function	line:66
-.rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.rate-contribute{$/;"	function	line:1
-.basic-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate-contribute{$/;"	function	line:9
-.generation-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate-contribute{$/;"	function	line:17
-.trouble-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.trouble-rate-contribute{$/;"	function	line:25
-.rate-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.rate-title{$/;"	function	line:33
-.basic-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate{$/;"	function	line:39
-.basic-rate dt	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate dt{$/;"	function	line:46
-.basic-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate dd{$/;"	function	line:53
-.generation-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate{$/;"	function	line:58
-.generation-rate dt	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate dt{$/;"	function	line:65
-.generation-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate dd{$/;"	function	line:72
-.new-review-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.new-review-contribute{$/;"	function	line:79
+.rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.rate-contribute{$/;"	function	line:2
+.basic-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate-contribute{$/;"	function	line:10
+.generation-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate-contribute{$/;"	function	line:18
+.trouble-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.trouble-rate-contribute{$/;"	function	line:26
+.rate-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.rate-title{$/;"	function	line:34
+.basic-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate{$/;"	function	line:41
+.basic-rate dt	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate dt{$/;"	function	line:48
+.basic-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.basic-rate dd{$/;"	function	line:55
+.generation-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate{$/;"	function	line:61
+.generation-rate dt	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate dt{$/;"	function	line:68
+.generation-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.generation-rate dd{$/;"	function	line:75
+.new-review-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.new-review-contribute{$/;"	function	line:81
+.review-contribute-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.review-contribute-button{$/;"	function	line:88
