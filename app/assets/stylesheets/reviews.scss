@@ -1,3 +1,84 @@
-// Place all the styles related to the reviews controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.rate-contribute{
+  width: 860px;
+  min-height: 360px;
+  margin: 15px auto;
+  background-color:rgba(255,255,255,0.7);
+}
+
+
+.basic-rate-contribute{
+  float: left;
+  width: 270px;
+  height: 310px;
+  margin: 0 10px 10px 20px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.generation-rate-contribute{
+  float: left;
+  width: 240px;
+  height: 310px;
+  margin: 0px 10px 10px 10px ;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.trouble-rate-contribute{
+  float: left;
+  width: 270px;
+  height: 310px;
+  margin: 0 20px 10px 10px;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.rate-title{
+  margin: 10px 0 20px 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.basic-rate{
+  display: table;
+  margin: 10px 10px;
+  width: 250px;
+  font-size: 16px;
+}
+
+.basic-rate dt{
+  display: table-cell;
+  vertical-align: middle;
+  color: #13131e;
+  font-weight: normal;
+}
+
+.basic-rate dd{
+  display: table-cell;
+  text-align: right;
+}
+
+.generation-rate{
+  display: table;
+  margin: 10px 10px;
+  width: 220px;
+  font-size: 16px;
+}
+
+.generation-rate dt{
+  display: table-cell;
+  vertical-align: middle;
+  color: #13131e;
+  font-weight: normal;
+}
+
+.generation-rate dd{
+  display: table-cell;
+  text-align: right;
+}
+
+
+
+.new-review-contribute{
+  width: 860px;
+  min-height: 410px;
+  margin: 15px auto;
+  background-color:rgba(255,255,255,0.7);
+}
