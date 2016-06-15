@@ -1,6 +1,6 @@
-class CreateUserReadBooks < ActiveRecord::Migration
+class CreateReviews < ActiveRecord::Migration
   def change
-    create_table :user_read_books do |t|
+    create_table :reviews do |t|
       t.references  :book
       t.references  :user
       t.integer :read_state #読書状態
@@ -29,7 +29,7 @@ class CreateUserReadBooks < ActiveRecord::Migration
       t.integer :in_30s40s_rate
       t.integer :in_50s60s_rate
       t.integer :after_retirement_rate
-      
+
       t.timestamps
     end
   end
