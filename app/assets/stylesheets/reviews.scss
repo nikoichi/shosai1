@@ -1,7 +1,7 @@
 
 .rate-contribute{
   width: 860px;
-  min-height: 360px;
+  min-height: 355px;
   margin: 15px auto;
   background-color:rgba(255,255,255,0.7);
 }
@@ -10,29 +10,36 @@
 .basic-rate-contribute{
   float: left;
   width: 260px;
-  height: 310px;
+  height: 305px;
   margin: 0 10px 10px 20px;
+  border: 2px solid gray;
+  border-radius: 8px;
   background-color:rgba(255,255,255,0.7);
 }
 
 .generation-rate-contribute{
   float: left;
   width: 260px;
-  height: 310px;
+  height: 305px;
   margin: 0px 10px 10px 10px ;
+  border: 2px solid gray;
+  border-radius: 8px;
   background-color:rgba(255,255,255,0.7);
 }
 
 .trouble-rate-contribute{
   float: left;
   width: 260px;
-  height: 310px;
+  height: 305px;
   margin: 0 20px 10px 10px;
+  border: 2px solid gray;
+  border-radius: 8px;
   background-color:rgba(255,255,255,0.7);
 }
 
 .rate-title{
-  margin: 10px 0 20px 10px;
+  padding: 10px ;
+  border-bottom: 1px solid gray;
   font-size: 16px;
   font-weight: bold;
 }
@@ -40,8 +47,8 @@
 // 基本評価
 .basic-rate{
   display: table;
-  margin: 6px 10px;
-  width: 240px;
+  padding: 3px 10px;
+  width: 256px;
   font-size: 16px;
 }
 
@@ -60,8 +67,8 @@
 // 世代別評価
 .generation-rate{
   display: table;
-  margin: 6px 10px;
-  width: 240px;
+  padding: 3px 10px;
+  width: 256px;
   font-size: 16px;
 }
 

@@ -22,11 +22,11 @@
   </div>
   <%= form_for [@book, @review] do |f| %>
   <div class="rate-contribute">
-    <h3 class="book-title">評価</h3>
+    <h3 class="headline">◆評価</h3>
     <div class="basic-rate-contribute">
       <h4 class="rate-title">基本評価 (5段階評価)</h4>
-      <dl class="basic-rate">
-        <dt>総合評価</dt>
+      <dl class="basic-rate" style="background-color:mistyrose;">
+        <dt style="font-weight:bold;">総合評価</dt>
         <dd><%= f.number_field :overall_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="basic-rate">
@@ -52,7 +52,7 @@
     </div>
 
     <div class="generation-rate-contribute">
-      <h4 class="rate-title">世代別おすすめ度評価 (5段階評価)</h4>
+      <h4 class="rate-title">世代別おすすめ度 (5段階評価)</h4>
       <dl class="generation-rate">
         <dt>小学生以下</dt>
         <dd><%= f.number_field :under_elementary_school_age_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
@@ -94,7 +94,7 @@
   </div>
 
   <div class="new-review-contribute clearfix">
-    <h3 class="book-title">レビュー投稿</h3>
+    <h3 class="headline">◆レビュー投稿</h3>
     <div class="" style="margin: 0 20px">
       <%= f.text_field :review_title, placeholder: 'レビューの見出しを記入', value:'',style: 'width: 100%', maxlength:100 %>
     </div>

@@ -1,7 +1,7 @@
-// showファイル作成時追加
+//上部本情報
 .book-title{
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -41,9 +41,16 @@
   background-color: black;
 }
 
+// レビュー表示
+.headline{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .reviews-container{
   float: left;
-  width: 600px;
+  width: 860px;
   min-height: 900px;
   margin: 15px 0 0 35px;
   background-color:rgba(255,255,255,0.7);
@@ -57,33 +64,33 @@
 
 .book-rate{
   float: left;
-  width: 180px;
+  width: 300px;
   min-height: 150px;//後で変更
-  margin: 5px;
+  margin: 5px 5px 5px 20px;
   background-color: white;//後で変更
 }
 
 .book-review{
   float: left;
-  width: 380px;
+  width: 510px;
   min-height: 150px;//後で変更
-  margin: 5px;
+  margin: 5px 20px 5px 5px;
   background-color: white;//後で変更
 }
 
-.review-titles-container{
-  float: left;
-  width: 240px;
-  min-height: 600px;
-  margin: 15px 0 0 20px;
-  background-color:rgba(255,255,255,0.7);
-}
-
-.review-title{
-  min-height: 30px;//後で変更
-  margin: 10px;
-  background-color: black;//後で変更
-}
+// .review-titles-container{
+//   float: left;
+//   width: 240px;
+//   min-height: 600px;
+//   margin: 15px 0 0 20px;
+//   background-color:rgba(255,255,255,0.7);
+// }
+//
+// .review-title{
+//   min-height: 30px;//後で変更
+//   margin: 10px;
+//   background-color: black;//後で変更
+// }
 
 // 総合評価の表示
 .show-overall-rate{
