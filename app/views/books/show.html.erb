@@ -23,26 +23,92 @@
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
-    <!-- <div class="review-rate clearfix"> -->
       <% reviews = Array.new(5) %>
       <% reviews.each do |review| %>
-        <div class="book-rate">
+        <div class="show-review-rate clearfix">
+          <div class="show-user">
+            投稿者：晃一　投稿日：2016/06/16
+          </div>
+          <div class="show-book-rate">
+            <!-- 基本評価テーブル -->
+            <div class="show-basic-rate-contribute">
+              <h4 class="show-rate-title">基本評価 (5段階評価)</h4>
+              <dl class="show-rate" style="background-color:mistyrose;">
+                <dt style="font-weight:bold;">総合評価</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>人生を変えた</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>学びを得た</dt>
+                <dd ><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>共感できた</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>面白い</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>感動した</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+            </div>
+            <!-- 世代別評価テーブル -->
+            <div class="show-generation-rate-contribute">
+              <h4 class="show-rate-title">世代別おすすめ度 (5段階評価)</h4>
+              <dl class="show-rate">
+                <dt>〜小学生</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>中学生</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>高校生</dt>
+                <dd ><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>大学生</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>〜20歳代</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>30〜40歳代</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>50歳代〜</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+              <dl class="show-rate">
+                <dt>退職後</dt>
+                <dd><span class="rate-small rate-small30"></span></dd>
+              </dl>
+            </div>
 
-        </div>
-        <div class="book-review">
-
+          </div>
+          <div class="show-book-review">
+            <h4 class="show-review-title">感動しました。</h4>
+            <div class="show-review">
+              <%= simple_format("5年ほど前に読んで、忘れていたが、名著ということで再読。人生で本当に大切なことは何か。その大切なもののために人生を捧げているか。そのことについて再度考えさせられた。自分を磨くことを習慣化することは難しいが、常に忘れてはならないことを思い出させてくれた。人生をすり減らしていると感じている方におすすめ。
+  【学びのポイント】
+  １）人生で大切なことは何か？
+  　・死の床で自分の人生を振り返ったとき、もっと多くの時間をオフィスで過ごせばよかった、あるいはテレビをもっと見ればよかったと悔やむ人は、果たしてどれくらいいるのだろうか。
+  　・答えは簡単だ。一人としているわけがない。死の床にあって思うのは、家族や愛する者のことである。
+  　・人は誰かのために生き、最期はその人たちのことを思うのだ。") %>
+            </div>
+          </div>
         </div>
       <% end %>
-    <!-- </div> -->
   </div>
-
-  <!-- <div class="review-titles-container">
-    <h4>レビュー一覧</h4>
-    <% reviews.each do |review| %>
-      <div class="review-title">
-
-      </div>
-    <% end %>
-  </div> -->
 
 </div>

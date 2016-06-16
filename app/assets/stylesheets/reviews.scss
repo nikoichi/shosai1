@@ -44,45 +44,26 @@
   font-weight: bold;
 }
 
-// 基本評価
-.basic-rate{
+// 各評価テーブル
+.new-rate{
   display: table;
   padding: 3px 10px;
   width: 256px;
   font-size: 16px;
 }
 
-.basic-rate dt{
+.new-rate dt{
   display: table-cell;
   vertical-align: middle;
   color: #13131e;
   font-weight: normal;
 }
 
-.basic-rate dd{
+.new-rate dd{
   display: table-cell;
   text-align: right;
 }
 
-// 世代別評価
-.generation-rate{
-  display: table;
-  padding: 3px 10px;
-  width: 256px;
-  font-size: 16px;
-}
-
-.generation-rate dt{
-  display: table-cell;
-  vertical-align: middle;
-  color: #13131e;
-  font-weight: normal;
-}
-
-.generation-rate dd{
-  display: table-cell;
-  text-align: right;
-}
 
 // レビュー
 .new-review-contribute{

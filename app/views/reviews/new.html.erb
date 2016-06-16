@@ -25,63 +25,63 @@
     <h3 class="headline">◆評価</h3>
     <div class="basic-rate-contribute">
       <h4 class="rate-title">基本評価 (5段階評価)</h4>
-      <dl class="basic-rate" style="background-color:mistyrose;">
+      <dl class="new-rate" style="background-color:mistyrose;">
         <dt style="font-weight:bold;">総合評価</dt>
         <dd><%= f.number_field :overall_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="basic-rate">
-        <dt>人生を変えた本</dt>
+      <dl class="new-rate">
+        <dt>人生を変えた</dt>
         <dd><%= f.number_field :change_life_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="basic-rate">
-        <dt>学びを得られた本</dt>
+      <dl class="new-rate">
+        <dt>学びを得た</dt>
         <dd><%= f.number_field :learning_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="basic-rate">
-        <dt>共感できた本</dt>
+      <dl class="new-rate">
+        <dt>共感できた</dt>
         <dd><%= f.number_field :sympathy_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="basic-rate">
-        <dt>面白い本</dt>
+      <dl class="new-rate">
+        <dt>面白い</dt>
         <dd><%= f.number_field :interesting_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="basic-rate">
-        <dt>感動した本</dt>
+      <dl class="new-rate">
+        <dt>感動した</dt>
         <dd><%= f.number_field :impression_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
     </div>
 
     <div class="generation-rate-contribute">
       <h4 class="rate-title">世代別おすすめ度 (5段階評価)</h4>
-      <dl class="generation-rate">
-        <dt>小学生以下</dt>
+      <dl class="new-rate">
+        <dt>〜小学生</dt>
         <dd><%= f.number_field :under_elementary_school_age_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
+      <dl class="new-rate">
         <dt>中学生</dt>
         <dd><%= f.number_field :junior_high_school_student_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
+      <dl class="new-rate">
         <dt>高校生</dt>
         <dd><%= f.number_field :high_school_student_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
+      <dl class="new-rate">
         <dt>大学生</dt>
         <dd><%= f.number_field :university_student_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
-        <dt>社会人(~20代)</dt>
+      <dl class="new-rate">
+        <dt>〜20歳代</dt>
         <dd><%= f.number_field :younger_20s_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
-        <dt>社会人(30代、40代)</dt>
+      <dl class="new-rate">
+        <dt>30〜40歳代</dt>
         <dd><%= f.number_field :in_30s40s_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
-        <dt>社会人(50代~)</dt>
+      <dl class="new-rate">
+        <dt>50歳代〜</dt>
         <dd><%= f.number_field :in_50s60s_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
-      <dl class="generation-rate">
+      <dl class="new-rate">
         <dt>退職後</dt>
         <dd><%= f.number_field :after_retirement_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
