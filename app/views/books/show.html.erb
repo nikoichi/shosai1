@@ -7,12 +7,17 @@
       </div>
       <!-- レートの星と数字の表示 -->
       <div class="show-overall-rate">
-        <div class="show-overall-rate-star">
-          <span class="rate rate30"></span>
-        </div>
-        <div class="show-overall-rate-val">
-          <span class="">3.0</span>
-        </div>
+        <% if @book.reviews.average(:overall_rate) %>
+          <% ave_rate = @book.reviews.average(:overall_rate)*2.round/2 *10 %>
+          <div class="show-overall-rate-star">
+            <span class="rate rate<%= ave_rate.round %>"></span>
+          </div>
+          <div class="show-overall-rate-val">
+            <span class=""><%= ave_rate /10 %></span>
+          </div>
+        <% else %>
+          <span class="show-no-overall-rate">まだ評価はありません。</span>
+        <% end %>
       </div>
     </div>
 

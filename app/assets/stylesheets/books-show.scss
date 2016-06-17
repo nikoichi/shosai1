@@ -34,6 +34,7 @@
 }
 // 総合評価の表示
 .show-overall-rate{
+  text-align: center;
   height: 40px;
   width: 240px;
 }
@@ -51,6 +52,12 @@
   width: 75px;
   font-size: 28px;
   font-weight: bold;
+}
+
+.show-no-overall-rate{
+  line-height: 40px;
+  font-size: 16px;
+  color: gray;
 }
 
 // 右側本の情報
@@ -89,7 +96,7 @@
 .reviews-container{
   float: left;
   width: 860px;
-  min-height: 900px;
+  min-height: 400px;
   margin: 15px 0 0 35px;
   background-color:rgba(255,255,255,0.7);
 }
