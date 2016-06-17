@@ -1,25 +1,7 @@
 <div class="contents clearfix">
-  <div class="book-info-detail">
-    <h2 class="book-title"><%= @book.book_title %></h2>
-    <div class="book-info-left">
-      <div class="book-image-box2">
-        <%= image_tag("#{@book.book_img_url}", :class =>"book-image2") %>
-      </div>
-      <!-- レートの星と数字の表示 -->
-      <div class="show-overall-rate">
-        <div class="show-overall-rate-star">
-          <span class="rate rate30"></span>
-        </div>
-        <div class="show-overall-rate-val">
-          <span class="">3.0</span>
-        </div>
-      </div>
+  <!-- 本情報の部分テンプレート -->
+  <%= render 'books/book_info', book: @book  %>
 
-    </div>
-    <div class="book-info-right">
-
-    </div>
-  </div>
   <%= form_for [@book, @review] do |f| %>
   <div class="rate-contribute">
     <h3 class="headline">◆評価</h3>

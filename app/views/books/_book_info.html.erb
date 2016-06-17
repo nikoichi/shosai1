@@ -1,0 +1,25 @@
+<div class="book-info-detail">
+  <h2 class="book-title"><%= book.book_title %></h2>
+  <div class="book-info-left">
+    <div class="book-image-box2">
+      <%= image_tag("#{book.book_img_url}", :class =>"book-image2") %>
+    </div>
+    <!-- レートの星と数字の表示 -->
+    <div class="show-overall-rate">
+      <% if book.reviews.average(:overall_rate) %>
+        <% ave_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+        <div class="show-overall-rate-star">
+          <span class="rate rate<%= ave_rate.round %>"></span>
+        </div>
+        <div class="show-overall-rate-val">
+          <span class=""><%= ave_rate /10 %></span>
+        </div>
+      <% else %>
+        <span class="show-no-overall-rate">まだ評価はありません。</span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="book-info-right">
+  </div>
+</div>
