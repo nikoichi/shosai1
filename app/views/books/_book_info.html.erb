@@ -66,18 +66,43 @@
         <h4 class="show-rate-title">基本評価 (5段階評価)</h4>
         <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
         <% if book.reviews.average(:overall_rate) %>
-          <% ave_overall_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+          <% rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+          <% else rate = nil %>
+        <% end %>
           <dl class="show-rate" style="background-color:mistyrose;">
             <dt style="font-weight:bold;">総合評価</dt>
-            <%= render 'books/rate_small', rate: ave_overall_rate.round %>
+            <%= render 'books/rate_small', rate: rate %>
+          </dl>
+        <!-- 総合評価以外の基本レート -->
+        <% rate_names = ["人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
+        <% review_columns = [:change_life_rate, :learning_rate, :sympathy_rate, :interesting_rate, :impression_rate] %>
+        <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+          <dl class="show-rate">
+            <dt><%= review_name %></dt>
+            <% if book.reviews.average(review_column) %>
+              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+              <% else rate = nil %>
+            <% end %>
+            <%= render 'books/rate_small', rate: rate %>
           </dl>
         <% end %>
-        <!-- 総合評価以外の基本レート -->
-
       </div>
       <!-- 世代別評価テーブル -->
-
+      <div class="show-generation-rate-contribute">
+        <h4 class="show-rate-title">世代別おすすめ度 (5段階評価)</h4>
+        <% rate_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"] %>
+        <% review_columns = [:under_elementary_school_age_rate, :junior_high_school_student_rate, :high_school_student_rate, :university_student_rate, :younger_20s_rate, :in_30s40s_rate, :in_50s60s_rate, :after_retirement_rate] %>
+        <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+          <dl class="show-rate">
+            <dt><%= review_name %></dt>
+            <% if book.reviews.average(review_column) %>
+              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+              <% else rate = nil %>
+            <% end %>
+            <%= render 'books/rate_small', rate: rate %>
+          </dl>
+        <% end %>
+      </div>
     </div>
-
   </div>
 </div>
