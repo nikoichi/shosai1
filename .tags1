@@ -4,18 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.headline	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.headline{$/;"	function	line:2
-.show-review-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review-rate{$/;"	function	line:8
-.show-user	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-user{$/;"	function	line:18
-.reviews-container	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.reviews-container{$/;"	function	line:25
-.show-book-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-book-rate{$/;"	function	line:34
-.show-basic-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-basic-rate-contribute{$/;"	function	line:42
-.show-generation-rate-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-generation-rate-contribute{$/;"	function	line:52
-.show-rate-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-rate-title{$/;"	function	line:63
-.show-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-rate{$/;"	function	line:70
-.show-rate dt	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-rate dt{$/;"	function	line:77
-.show-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-rate dd{$/;"	function	line:84
-.show-no-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-no-rate{$/;"	function	line:89
-.show-book-review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-book-review{$/;"	function	line:95
-.show-review-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review-title{$/;"	function	line:102
-.show-review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review{$/;"	function	line:108

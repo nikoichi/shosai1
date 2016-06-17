@@ -7,19 +7,77 @@
     <!-- レートの星と数字の表示 -->
     <div class="show-overall-rate">
       <% if book.reviews.average(:overall_rate) %>
-        <% ave_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+        <% ave_overall_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
         <div class="show-overall-rate-star">
-          <span class="rate rate<%= ave_rate.round %>"></span>
+          <span class="rate rate<%= ave_overall_rate.round %>"></span>
         </div>
         <div class="show-overall-rate-val">
-          <span class=""><%= ave_rate /10 %></span>
+          <span class=""><%= ave_overall_rate /10 %></span>
         </div>
       <% else %>
+        <% ave_overall_rate = "" %>
         <span class="show-no-overall-rate">まだ評価はありません。</span>
       <% end %>
     </div>
   </div>
 
   <div class="book-info-right">
+    <div class="authors-box">
+      <span>著者：</span>
+      <% authors = ["スティーブン・R・コヴィー", "フランクリン・コヴィー・ジャパン"] %>
+      <% authors.each_with_index do |author, i| %>
+        <a href="#"><%= author %></a>
+        <% unless authors.length == i+1  %>
+          <span>,&nbsp;</span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div style="padding: 0 5px;">
+      <%= button_tag type: "submit", class: "btn btn-default link-amazon-button" do %>
+        <span>Amazon 詳細ページへ</span>
+      <% end %>
+    </div>
+
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読んだ本<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読みたい本<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読む予定<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>気になる本<br>に追加</span>
+      <% end %>
+    </div>
+
+    <div class="show-book-rate">
+      <!-- 基本評価テーブル -->
+      <div class="show-basic-rate-contribute">
+        <h4 class="show-rate-title">基本評価 (5段階評価)</h4>
+        <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
+        <% if book.reviews.average(:overall_rate) %>
+          <% ave_overall_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+          <dl class="show-rate" style="background-color:mistyrose;">
+            <dt style="font-weight:bold;">総合評価</dt>
+            <%= render 'books/rate_small', rate: ave_overall_rate.round %>
+          </dl>
+        <% end %>
+        <!-- 総合評価以外の基本レート -->
+
+      </div>
+      <!-- 世代別評価テーブル -->
+
+    </div>
+
   </div>
 </div>

@@ -17,7 +17,11 @@
               <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
               <dl class="show-rate" style="background-color:mistyrose;">
                 <dt style="font-weight:bold;">総合評価</dt>
-                <%= render 'books/rate_small', rate: review.overall_rate %>
+                <% if review.overall_rate %>
+                <% rate = review.overall_rate * 10 %>
+                <% else rate  = nil %>
+                <% end %>
+                <%= render 'books/rate_small', rate: rate %>
               </dl>
               <!-- 総合評価以外の基本レート -->
               <% rate_names = ["人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
@@ -25,7 +29,11 @@
               <% rate_names.zip(review_columns).each do |review_name, review_column| %>
                 <dl class="show-rate">
                   <dt><%= review_name %></dt>
-                  <%= render 'books/rate_small', rate: review_column %>
+                  <% if review_column %>
+                  <% rate = review_column * 10 %>
+                  <% else rate  = nil %>
+                  <% end %>
+                  <%= render 'books/rate_small', rate: rate %>
                 </dl>
               <% end %>
             </div>
@@ -37,7 +45,11 @@
               <% rate_names.zip(review_columns).each do |review_name, review_column| %>
                 <dl class="show-rate">
                   <dt><%= review_name %></dt>
-                  <%= render 'books/rate_small', rate: review_column %>
+                  <% if review_column %>
+                  <% rate = review_column * 10 %>
+                  <% else rate  = nil %>
+                  <% end %>
+                  <%= render 'books/rate_small', rate: rate %>
                 </dl>
               <% end %>
             </div>
