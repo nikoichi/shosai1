@@ -38,7 +38,8 @@ $rate-small50 :$starFull-small * 5 + $starSpace-small * 4;//星5 (後半は[lett
   white-space: nowrap;//これがないと改行されて星の半分（0.5）が表現できなくなる
   }
 }
-.rate-small0:after{//星0
+
+.rate-smal00:after{//星0
   width: 0;
 }
 .rate-small10:after{//星1

@@ -17,14 +17,13 @@
     </div>
 
     <div class="book-info-right">
-
     </div>
   </div>
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
-      <% reviews = Array.new(5) %>
-      <% reviews.each do |review| %>
+      <!-- <% reviews = Array.new(5) %> -->
+      <% @book.reviews.each do |review| %>
         <div class="show-review-rate clearfix">
           <div class="show-user">
             投稿者：晃一　投稿日：2016/06/16
@@ -33,78 +32,38 @@
             <!-- 基本評価テーブル -->
             <div class="show-basic-rate-contribute">
               <h4 class="show-rate-title">基本評価 (5段階評価)</h4>
+              <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
               <dl class="show-rate" style="background-color:mistyrose;">
                 <dt style="font-weight:bold;">総合評価</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
+                <%= render 'books/rate_small', rate: review.overall_rate %>
               </dl>
-              <dl class="show-rate">
-                <dt>人生を変えた</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>学びを得た</dt>
-                <dd ><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>共感できた</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>面白い</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>感動した</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
+              <!-- 総合評価以外の基本レート -->
+              <% rate_names = ["人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
+              <% review_columns = [review.change_life_rate, review.learning_rate, review.sympathy_rate, review.interesting_rate, review.impression_rate] %>
+              <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+                <dl class="show-rate">
+                  <dt><%= review_name %></dt>
+                  <%= render 'books/rate_small', rate: review_column %>
+                </dl>
+              <% end %>
             </div>
             <!-- 世代別評価テーブル -->
             <div class="show-generation-rate-contribute">
               <h4 class="show-rate-title">世代別おすすめ度 (5段階評価)</h4>
-              <dl class="show-rate">
-                <dt>〜小学生</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>中学生</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>高校生</dt>
-                <dd ><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>大学生</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>〜20歳代</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>30〜40歳代</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>50歳代〜</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
-              <dl class="show-rate">
-                <dt>退職後</dt>
-                <dd><span class="rate-small rate-small30"></span></dd>
-              </dl>
+              <% rate_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"] %>
+              <% review_columns = [review.under_elementary_school_age_rate, review.junior_high_school_student_rate, review.high_school_student_rate, review.university_student_rate, review.younger_20s_rate, review.in_30s40s_rate, review.in_50s60s_rate, review.after_retirement_rate] %>
+              <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+                <dl class="show-rate">
+                  <dt><%= review_name %></dt>
+                  <%= render 'books/rate_small', rate: review_column %>
+                </dl>
+              <% end %>
             </div>
-
           </div>
           <div class="show-book-review">
-            <h4 class="show-review-title">感動しました。</h4>
+            <h4 class="show-review-title"><%= review.review_title %></h4>
             <div class="show-review">
-              <%= simple_format("5年ほど前に読んで、忘れていたが、名著ということで再読。人生で本当に大切なことは何か。その大切なもののために人生を捧げているか。そのことについて再度考えさせられた。自分を磨くことを習慣化することは難しいが、常に忘れてはならないことを思い出させてくれた。人生をすり減らしていると感じている方におすすめ。
-  【学びのポイント】
-  １）人生で大切なことは何か？
-  　・死の床で自分の人生を振り返ったとき、もっと多くの時間をオフィスで過ごせばよかった、あるいはテレビをもっと見ればよかったと悔やむ人は、果たしてどれくらいいるのだろうか。
-  　・答えは簡単だ。一人としているわけがない。死の床にあって思うのは、家族や愛する者のことである。
-  　・人は誰かのために生き、最期はその人たちのことを思うのだ。") %>
+              <%= simple_format(review.review) %>
             </div>
           </div>
         </div>
