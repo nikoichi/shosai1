@@ -1,10 +1,9 @@
 class BooksController < ApplicationController
 
   def index
-    @recommendation_books_new = Book.limit(20).shuffle[0..4]
-    # binding.pry
-    @recommendation_books_all = Book.limit(20).shuffle[0..4]
-    @recommendation_books_generation = Book.limit(20).shuffle[0..4]
+    @recommendation_new_books = Book.limit(20).shuffle[0..4] #新着好評価(高評価上位20冊から5冊を表示
+    @recommendation_all_books = Book.limit(20).shuffle[0..4] #すべての本の高評価
+    @recommendation_generation_books = Book.limit(20).shuffle[0..4] #世代別高評価
   end
 
   def show

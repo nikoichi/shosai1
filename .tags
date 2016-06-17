@@ -52,10 +52,6 @@ rate50	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/style
 .rate45:after	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate.scss	/^.rate45:after{\/\/星4.5$/;"	function	line:65
 .rate50:after	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate.scss	/^.rate50:after{\/\/星5$/;"	function	line:68
 .wrap	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate.scss	/^.wrap{$/;"	function	line:72
-BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
-index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
-show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:10	class:BooksController
-search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:14	class:BooksController
 starFull-small	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^$starFull-small: 14px;\/\/星1個の幅$/;"	function	line:2
 starHalf-small	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^$starHalf-small: $starFull-small \/ 2;\/\/星半分（0.5）の幅$/;"	function	line:3
 starSpace-small	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^$starSpace-small: 1px; \/\/星同士の間隔$/;"	function	line:4
@@ -107,3 +103,7 @@ rate-small50	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets
 .show-book-review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-book-review{$/;"	function	line:159
 .show-review-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review-title{$/;"	function	line:166
 .show-review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review{$/;"	function	line:172
+BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
+index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
+show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:9	class:BooksController
+search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:13	class:BooksController

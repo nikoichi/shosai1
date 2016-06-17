@@ -1,117 +1,13 @@
 <div class="contents clearfix">
   <!-- 新着の評価が高評価 -->
-  <div class="recommendation-content">
-    <div class="recommendation-header">
-      <a class="recommendation-link link-hover-blue" href="#">
-        <strong class="recommendation-title"> -新着- 高評価の本【総合評価】</strong>
-        <span class="recommendation-detail">›ランキングを見る</span>
-      </a>
-      <div class="dropdown recommendation-right-dropdown">
-        <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
-          <span class="">評価内容を変える▼</span>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">総合評価</a></li>
-          <li><a href="#">人生を変えた本</a></li>
-          <li><a href="#">学びが得られた本</a></li>
-          <li><a href="#">共感できた本</a></li>
-          <li><a href="#">面白い本</a></li>
-          <li><a href="#">感動した本</a></li>
-        </ul>
-      </div>
-    </div>
-    <% @recommendation_books_new.each do |book|%>
-      <div class="book-image-box1">
-        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
-        <!-- レートの星と数字の表示 -->
-        <div class="show-top-rate">
-          <div class="show-top-rate-star">
-            <span class="rate-small rate-small30"></span>
-          </div>
-          <div class="show-top-rate-val">
-            <span class="">3.0</span>
-          </div>
-        </div>
-
-      </div>
-    <% end %>
-  </div>
+  <% rate_names = ["-新着- 高評価の本【総合評価】", "総合評価", "人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
+  <%= render 'books/index_separator',rate_names: rate_names, books: @recommendation_new_books %>
 
   <!-- 全図書の評価が高評価 -->
-  <div class="recommendation-content">
-    <div class="recommendation-header">
-      <a class="recommendation-link link-hover-blue" href="#">
-        <strong class="recommendation-title">高評価の本【総合評価】</strong>
-        <span class="recommendation-detail">›ランキングを見る</span>
-      </a>
-      <div class="dropdown recommendation-right-dropdown">
-        <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
-          <span class="">評価内容を変える▼</span>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">総合評価</a></li>
-          <li><a href="#">人生を変えた本</a></li>
-          <li><a href="#">学びが得られた本</a></li>
-          <li><a href="#">共感できた本</a></li>
-          <li><a href="#">面白い本</a></li>
-          <li><a href="#">感動した本</a></li>
-        </ul>
-      </div>
-    </div>
-    <% @recommendation_books_all.each do |book|%>
-      <div class="book-image-box1">
-        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
-        <!-- レートの星と数字の表示 -->
-        <div class="show-top-rate">
-          <div class="show-top-rate-star">
-            <span class="rate-small rate-small30"></span>
-          </div>
-          <div class="show-top-rate-val">
-            <span class="">3.0</span>
-          </div>
-        </div>
-
-      </div>
-    <% end %>
-  </div>
+  <% rate_names = ["高評価の本【総合評価】", "総合評価", "人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
+  <%= render 'books/index_separator',rate_names: rate_names, books: @recommendation_all_books %>
 
   <!-- 年代別おすすめ -->
-  <div class="recommendation-content">
-    <div class="recommendation-header">
-      <a class="recommendation-link link-hover-blue" href="#">
-        <strong class="recommendation-title">世代別おすすめの本【社会人(〜20代)】</strong>
-        <span class="recommendation-detail">›ランキングを見る</span>
-      </a>
-      <div class="dropdown recommendation-right-dropdown">
-        <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
-          <span class="">他の世代に変える▼</span>
-        </a>
-        <ul class="dropdown-menu" role="menu">
-          <li><a href="#">小学生以下</a></li>
-          <li><a href="#">中学生</a></li>
-          <li><a href="#">高校生</a></li>
-          <li><a href="#">大学生</a></li>
-          <li><a href="#">社会人(〜20代)</a></li>
-          <li><a href="#">社会人(30代)</a></li>
-          <li><a href="#">社会人(40代〜)</a></li>
-          <li><a href="#">退職後</a></li>
-        </ul>
-      </div>
-    </div>
-    <% @recommendation_books_generation.each do |book|%>
-      <div class="book-image-box1">
-        <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
-        <!-- レートの星と数字の表示 -->
-        <div class="show-top-rate">
-          <div class="show-top-rate-star">
-            <span class="rate-small rate-small30"></span>
-          </div>
-          <div class="show-top-rate-val">
-            <span class="">3.0</span>
-          </div>
-        </div>
-        
-      </div>
-    <% end %>
-  </div>
+  <% rate_names = ["世代別おすすめの本【社会人(〜20代)】", "〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"] %>
+  <%= render 'books/index_separator',rate_names: rate_names, books: @recommendation_generation_books %>
 </div>
