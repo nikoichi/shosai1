@@ -1,0 +1,98 @@
+//上部本情報
+.book-title{
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.book-info-detail{
+  width: 860px;
+  min-height: 410px;
+  margin: 15px auto;
+  background-color:rgba(255,255,255,0.7);
+}
+
+.book-info-left{
+  float: left;
+  height: 350px;
+  width: 240px;
+  margin: 5px 20px;
+  background-color: rgba(255,255,255,1.0);
+}
+
+.book-image-box2{
+  position: relative;
+  height: 310px;
+  width: 240px;
+  // background-color: rgba(255,255,255,1.0);
+}
+
+.book-image2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+// 総合評価の表示
+.show-overall-rate{
+  text-align: center;
+  height: 40px;
+  width: 240px;
+}
+
+.show-overall-rate-star{
+  float: left;
+  height: 40px;
+  width: 165px;
+  padding: 8px 6px 8px 31px;
+}
+
+.show-overall-rate-val{
+  float: left;
+  height: 40px;
+  width: 75px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.show-no-overall-rate{
+  line-height: 40px;
+  font-size: 16px;
+  color: gray;
+}
+
+// 右側本の情報
+.book-info-right{
+  float: left;
+  min-height: 350px;
+  width: 550px;
+  margin: 5px 10px;
+  background-color: white;
+}
+
+.authors-box{
+  width: 100%;
+  padding: 5px;
+}
+
+.info-link-button{
+  float: left;
+  width: 250px;
+  height: 30px;
+  margin: 0 5px;
+  line-height: 16px;
+  background-image: none;
+  background-color: orange;
+  font-weight: bold;
+}
+
+.book-add-button-box{
+  float: left;
+  // height: 50px;
+  width: 120px;
+  margin: 5px;
+}
+
+.book-add-button{
+  width: 120px;
+  font-weight: bold;
+}

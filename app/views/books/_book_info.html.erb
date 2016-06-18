@@ -1,0 +1,111 @@
+<div class="book-info-detail clearfix">
+  <h2 class="book-title"><%= book.book_title %></h2>
+  <div class="book-info-left">
+    <div class="book-image-box2">
+      <%= link_to book do image_tag(book.book_img_url , :class =>"book-image2") end %>
+    </div>
+    <!-- レートの星と数字の表示 -->
+    <div class="show-overall-rate">
+      <% if book.reviews.average(:overall_rate) %>
+        <% ave_overall_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+        <div class="show-overall-rate-star">
+          <span class="rate rate<%= ave_overall_rate.round %>"></span>
+        </div>
+        <div class="show-overall-rate-val">
+          <span class=""><%= ave_overall_rate /10 %></span>
+        </div>
+      <% else %>
+        <% ave_overall_rate = "" %>
+        <span class="show-no-overall-rate">まだ評価はありません。</span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="book-info-right clearfix">
+    <div class="authors-box">
+      <span>著者：</span>
+      <% authors = ["スティーブン・R・コヴィー", "フランクリン・コヴィー・ジャパン"] %>
+      <% authors.each_with_index do |author, i| %>
+        <a href="#"><%= author %></a>
+        <% unless authors.length == i+1  %>
+          <span>,&nbsp;</span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div style="">
+      <%= link_to 'Amazon 詳細ページへ',book.amazon_detail_url , class: "btn btn-default info-link-button"  %>
+      <% if current_page?(new_book_review_path(book)) %>
+        <%= link_to 'レビュー 一覧ページへ',book, method: :get, class: "btn btn-default info-link-button"  %>
+      <% else %>
+        <%= link_to 'レビューを書く',new_book_review_path(book), method: :get, class: "btn btn-default info-link-button"  %>
+      <% end %>
+    </div>
+
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読んだ本<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読みたい本<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>読む予定<br>に追加</span>
+      <% end %>
+    </div>
+    <div class="book-add-button-box">
+      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+        <span>気になる本<br>に追加</span>
+      <% end %>
+    </div>
+
+    <div class="show-book-rate">
+      <!-- 基本評価テーブル -->
+      <div class="show-basic-rate-contribute">
+        <h4 class="show-rate-title">評価平均【基本評価】</h4>
+        <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
+        <% if book.reviews.average(:overall_rate) %>
+          <% rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+          <% else rate = nil %>
+        <% end %>
+          <dl class="show-rate" style="background-color:mistyrose;">
+            <dt style="font-weight:bold;">総合評価</dt>
+            <%= render 'books/rate_small', rate: rate %>
+          </dl>
+        <!-- 総合評価以外の基本レート -->
+        <% rate_names = ["人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
+        <% review_columns = [:change_life_rate, :learning_rate, :sympathy_rate, :interesting_rate, :impression_rate] %>
+        <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+          <dl class="show-rate">
+            <dt><%= review_name %></dt>
+            <% if book.reviews.average(review_column) %>
+              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+              <% else rate = nil %>
+            <% end %>
+            <%= render 'books/rate_small', rate: rate %>
+          </dl>
+        <% end %>
+      </div>
+      <!-- 世代別評価テーブル -->
+      <div class="show-generation-rate-contribute">
+        <h4 class="show-rate-title">評価平均【世代別おすすめ】</h4>
+        <% rate_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"] %>
+        <% review_columns = [:under_elementary_school_age_rate, :junior_high_school_student_rate, :high_school_student_rate, :university_student_rate, :younger_20s_rate, :in_30s40s_rate, :in_50s60s_rate, :after_retirement_rate] %>
+        <% rate_names.zip(review_columns).each do |review_name, review_column| %>
+          <dl class="show-rate">
+            <dt><%= review_name %></dt>
+            <% if book.reviews.average(review_column) %>
+              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+              <% else rate = nil %>
+            <% end %>
+            <%= render 'books/rate_small', rate: rate %>
+          </dl>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
