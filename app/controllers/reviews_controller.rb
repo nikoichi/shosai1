@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
 
   def create
     Review.create(create_params)
-    redirect_to controller: :books, action: :index # トップページにリダイレクトする
+    redirect_to book_path(params[:book_id]) # トップページにリダイレクトする
   end
 
   private

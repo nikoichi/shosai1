@@ -119,6 +119,6 @@ search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/
 .show-no-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-no-overall-rate{$/;"	function	line:57
 .book-info-right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-right{$/;"	function	line:64
 .authors-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.authors-box{$/;"	function	line:72
-.link-amazon-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.link-amazon-button{$/;"	function	line:77
-.book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:84
-.book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:91
+.info-link-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.info-link-button{$/;"	function	line:77
+.book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:86
+.book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:93

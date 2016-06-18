@@ -63,7 +63,7 @@
 // 右側本の情報
 .book-info-right{
   float: left;
-  height: 350px;
+  min-height: 350px;
   width: 550px;
   margin: 5px 10px;
   background-color: white;
@@ -74,10 +74,14 @@
   padding: 5px;
 }
 
-.link-amazon-button{
-  width: 200px;
+.info-link-button{
+  float: left;
+  width: 250px;
   height: 30px;
+  margin: 0 5px;
   line-height: 16px;
+  background-image: none;
+  background-color: orange;
   font-weight: bold;
 }
 

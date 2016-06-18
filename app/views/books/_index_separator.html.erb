@@ -17,7 +17,7 @@
   </div>
   <% books.each do |book|%>
     <div class="book-image-box1">
-      <%= link_to image_tag("#{book.book_img_url}"), {:controller => :books, :action => :show, :id => book.id} %>
+      <%= link_to book do image_tag( book.book_img_url ) end %>
       <!-- レートの星と数字の表示 -->
       <div class="show-top-rate">
         <!-- overall_rateiに評価がある場合のみ星表示 -->
