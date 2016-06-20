@@ -48,3 +48,4 @@ end
 gem 'mechanize'
 gem 'pry-rails'
 gem 'devise'
+gem 'paperclip'

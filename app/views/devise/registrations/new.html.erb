@@ -21,6 +21,17 @@
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "sign-up-input"  %>
       </div>
 
+      <div class="sign-up-input-box">
+        <%= f.label "ニックネーム" %><br />
+        <%= f.text_field :nickname, class: "sign-up-input"  %>
+      </div>
+
+      <div class="sign-up-avatar-box">
+        <%= f.label "アイコン（任意）" %><br />
+        <%= f.file_field :avatar %>
+      </div>
+
+
       <div class="actions sign-up-input-box">
         <%= f.submit "会員登録", class: "sign-up-submit-button" %>
       </div>

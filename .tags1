@@ -4,3 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+.sign-up	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up{$/;"	function	line:1
+.sign-up-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-title{$/;"	function	line:6
+.sign-up-input-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-input-box{$/;"	function	line:12
+.sign-up-input	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-input{$/;"	function	line:17
+.sign-up-submit-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-submit-button{$/;"	function	line:26
+.sign-up-avatar-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-avatar-box{$/;"	function	line:34
