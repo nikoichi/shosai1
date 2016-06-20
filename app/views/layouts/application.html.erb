@@ -31,6 +31,7 @@
       <!-- ヘッダー右側 -->
       <div class="right-nav">
         <ul class="right-nav-list">
+          <% if user_signed_in? %>
           <li>
             <a class="header-link" accesskey="2" data-gt="{&quot;chrome_nav_item&quot;:&quot;timeline_chrome&quot;}" href="https://www.facebook.com/koichi.watanabe.984" title="プロフィール" id="">
               <img class="header-prof-img" src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-1/p50x50/12227566_905194642902943_5476046247724179472_n.jpg?oh=4f264cd269cdd40a8080fd3b30471381&amp;oe=580B92C4" alt="" id="profile_pic_header">
@@ -42,6 +43,7 @@
               <span>友達</span>
             </a>
           </li>
+          <% end %>
           <li>
             <a href="#" class="header-link">
               <span>ランキング</span>
@@ -52,7 +54,11 @@
               <span>その他 ▼</span>
             </a>
             <ul class="dropdown-menu hedder-dropdown" role="menu">
-              <li><a href="#">ログアウト</a></li>
+              <% if user_signed_in? %>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to 'ログイン', new_user_session_path %></li>
+              <% end %>
               <li><a href="#">グループ</a></li>
               <li class="divider"></li>
               <li><a href="#">設定</a></li>

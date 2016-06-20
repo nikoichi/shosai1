@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: :new
   def new
     @book = Book.find(params[:book_id])
     @review = Review.new
@@ -6,7 +7,7 @@ class ReviewsController < ApplicationController
 
   def create
     Review.create(create_params)
-    redirect_to book_path(params[:book_id]) # トップページにリダイレクトする
+    redirect_to book_path(params[:book_id]) # 書籍ページ(show)にリダイレクトする
   end
 
   private

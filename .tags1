@@ -4,17 +4,3 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-.book-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-title{$/;"	function	line:2
-.book-info-detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-detail{$/;"	function	line:8
-.book-info-left	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-left{$/;"	function	line:15
-.book-image-box2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image-box2{$/;"	function	line:23
-.book-image2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image2{$/;"	function	line:30
-.show-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate{$/;"	function	line:36
-.show-overall-rate-star	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-star{$/;"	function	line:42
-.show-overall-rate-val	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-val{$/;"	function	line:49
-.show-no-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-no-overall-rate{$/;"	function	line:57
-.book-info-right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-right{$/;"	function	line:64
-.authors-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.authors-box{$/;"	function	line:72
-.info-link-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.info-link-button{$/;"	function	line:77
-.book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:86
-.book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:93
