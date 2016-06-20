@@ -122,3 +122,17 @@ search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/
 .info-link-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.info-link-button{$/;"	function	line:77
 .book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:86
 .book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:93
+ReviewsController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	class	line:1
+new	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def new$/;"	method	line:3	class:ReviewsController
+create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create$/;"	method	line:8	class:ReviewsController
+create_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create_params$/;"	method	line:14	class:ReviewsController
+ApplicationController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
+after_sign_out_path_for	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^  def after_sign_out_path_for(resource)$/;"	method	line:7	class:ApplicationController
+configure_permitted_parameters	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^  def configure_permitted_parameters$/;"	method	line:11	class:ApplicationController
+User	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	class	line:1
+.sign-up	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up{$/;"	function	line:1
+.sign-up-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-title{$/;"	function	line:6
+.sign-up-input-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-input-box{$/;"	function	line:12
+.sign-up-input	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-input{$/;"	function	line:17
+.sign-up-submit-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-submit-button{$/;"	function	line:26
+.sign-up-avatar-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/user.scss	/^.sign-up-avatar-box{$/;"	function	line:34
