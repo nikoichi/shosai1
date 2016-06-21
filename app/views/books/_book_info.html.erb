@@ -37,28 +37,44 @@
       <%= link_to 'Amazon 詳細ページへ',book.amazon_detail_url , class: "btn btn-default info-link-button"  %>
     </div>
 
-    <div class="book-add-button-box">
-      <% if current_page?(new_book_review_path(book)) %>
-        <%= link_to book, method: :get, class: "btn btn-default book-add-button" do %>
-        レビュー<br>一覧ページへ
-        <% end %>
+    <div class="clearfix">
+      <!-- レビューを書いている場合 -->
+      <% unless @myreview == [] %>
+        <div class="book-add-button-box">
+          <%= link_to 'レビューを編集',new_book_review_path(book), method: :get, class: "btn btn-default book-add-button"  %>
+        </div>
+        <div class="book-add-button-box">
+          <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+            <span>おすすめの本<br>に追加</span>
+          <% end %>
+        </div>
+
+      <!-- レビューを書いていない場合 -->
       <% else %>
-        <%= link_to 'レビューを書く',new_book_review_path(book), method: :get, class: "btn btn-default book-add-button"  %>
-      <% end %>
-    </div>
-    <div class="book-add-button-box">
-      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
-        <span>読みたい本<br>に追加</span>
-      <% end %>
-    </div>
-    <div class="book-add-button-box">
-      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
-        <span>読む予定<br>に追加</span>
-      <% end %>
-    </div>
-    <div class="book-add-button-box">
-      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
-        <span>気になる本<br>に追加</span>
+        <div class="book-add-button-box">
+          <% if current_page?(new_book_review_path(book)) %>
+            <%= link_to book, method: :get, class: "btn btn-default book-add-button" do %>
+            レビュー<br>一覧ページへ
+            <% end %>
+          <% else %>
+            <%= link_to 'レビューを書く',new_book_review_path(book), method: :get, class: "btn btn-default book-add-button"  %>
+          <% end %>
+        </div>
+        <div class="book-add-button-box">
+          <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+            <span>読みたい本<br>に追加</span>
+          <% end %>
+        </div>
+        <div class="book-add-button-box">
+          <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+            <span>読む予定<br>に追加</span>
+          <% end %>
+        </div>
+        <div class="book-add-button-box">
+          <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
+            <span>気になる本<br>に追加</span>
+          <% end %>
+        </div>
       <% end %>
     </div>
 

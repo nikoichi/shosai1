@@ -9,11 +9,11 @@
       <h4 class="rate-title">基本評価 (5段階評価)</h4>
       <dl class="new-rate" style="background-color:mistyrose;">
         <dt style="font-weight:bold;">総合評価</dt>
-        <dd><%= f.number_field :overall_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+        <dd><%= f.number_field :overall_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="new-rate">
         <dt>人生を変えた</dt>
-        <dd><%= f.number_field :change_life_rate, placeholder: '未評価', value: '', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+        <dd><%= f.number_field :change_life_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
       </dl>
       <dl class="new-rate">
         <dt>学びを得た</dt>
