@@ -6,8 +6,8 @@
     </div>
     <!-- レートの星と数字の表示 -->
     <div class="show-overall-rate">
-      <% if book.reviews.average(:overall_rate) %>
-        <% ave_overall_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+      <% if reviews.average(:overall_rate) %>
+        <% ave_overall_rate = reviews.average(:overall_rate)*2.round/2 *10 %>
         <div class="show-overall-rate-star">
           <span class="rate rate<%= ave_overall_rate.round %>"></span>
         </div>
@@ -68,8 +68,8 @@
       <div class="show-basic-rate-contribute">
         <h4 class="show-rate-title">評価平均【基本評価】</h4>
         <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
-        <% if book.reviews.average(:overall_rate) %>
-          <% rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+        <% if reviews.average(:overall_rate) %>
+          <% rate = reviews.average(:overall_rate)*2.round/2 *10 %>
           <% else rate = nil %>
         <% end %>
           <dl class="show-rate" style="background-color:mistyrose;">
@@ -82,8 +82,8 @@
         <% rate_names.zip(review_columns).each do |review_name, review_column| %>
           <dl class="show-rate">
             <dt><%= review_name %></dt>
-            <% if book.reviews.average(review_column) %>
-              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+            <% if reviews.average(review_column) %>
+              <% rate = reviews.average(review_column)*2.round/2 *10 %>
               <% else rate = nil %>
             <% end %>
             <%= render 'books/rate_small', rate: rate %>
@@ -98,8 +98,8 @@
         <% rate_names.zip(review_columns).each do |review_name, review_column| %>
           <dl class="show-rate">
             <dt><%= review_name %></dt>
-            <% if book.reviews.average(review_column) %>
-              <% rate = book.reviews.average(review_column)*2.round/2 *10 %>
+            <% if reviews.average(review_column) %>
+              <% rate = reviews.average(review_column)*2.round/2 *10 %>
               <% else rate = nil %>
             <% end %>
             <%= render 'books/rate_small', rate: rate %>

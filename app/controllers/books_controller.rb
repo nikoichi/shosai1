@@ -8,6 +8,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    @reviews = Review.includes(:user).where(book_id: params[:id])
   end
 
   def search

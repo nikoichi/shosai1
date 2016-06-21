@@ -79,10 +79,6 @@ rate-small50	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets
 .rate-small45:after	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^.rate-small45:after{\/\/星4.5$/;"	function	line:66
 .rate-small50:after	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^.rate-small50:after{\/\/星5$/;"	function	line:69
 .wrap	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/rates/rate-small.scss	/^.wrap{$/;"	function	line:73
-BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
-index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
-show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:9	class:BooksController
-search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:13	class:BooksController
 .headline	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.headline{$/;"	function	line:2
 .show-review-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-review-rate{$/;"	function	line:8
 .show-user	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-show.scss	/^.show-user{$/;"	function	line:18
@@ -170,3 +166,7 @@ create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/
 create_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create_params$/;"	method	line:14	class:ReviewsController
 User	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	class	line:1
 Review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/models/review.rb	/^class Review < ActiveRecord::Base$/;"	class	line:1
+BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
+index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
+show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:9	class:BooksController
+search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:14	class:BooksController

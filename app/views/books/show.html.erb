@@ -1,14 +1,17 @@
 <div class="contents clearfix">
   <!-- 本情報の部分テンプレート -->
-  <%= render 'books/book_info', book: @book  %>
+  <%= render 'books/book_info', book: @book, reviews: @reviews  %>
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
       <!-- <% reviews = Array.new(5) %> -->
-      <% @book.reviews.each do |review| %>
+      <% @reviews.each do |review| %>
         <div class="show-review-rate clearfix">
           <div class="show-user">
-            投稿者：晃一　投稿日：2016/06/16
+            投稿者：<%= review.user.nickname %>　初回投稿日：<%= review.created_at.strftime("%Y/%m/%d") %>
+            <% if review.created_at.strftime("%Y/%m/%d") != review.updated_at.strftime("%Y/%m/%d") %>
+             　最新編集日：<%= review.updated_at.strftime("%Y/%m/%d") %>
+            <% end %>
           </div>
           <div class="show-book-rate">
             <!-- 基本評価テーブル -->
