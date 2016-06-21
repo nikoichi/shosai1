@@ -22,8 +22,8 @@
       </div>
 
       <div class="sign-up-input-box">
-        <%= f.label "ニックネーム" %><br />
-        <%= f.text_field :nickname, class: "sign-up-input"  %>
+        <%= f.label "ニックネーム（最大15文字）" %><br />
+        <%= f.text_field :nickname, class: "sign-up-input", maxlength: 15  %>
       </div>
 
       <div class="sign-up-avatar-box">

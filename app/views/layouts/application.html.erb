@@ -34,8 +34,8 @@
           <% if user_signed_in? %>
           <li>
             <a class="header-link" accesskey="2" data-gt="{&quot;chrome_nav_item&quot;:&quot;timeline_chrome&quot;}" href="https://www.facebook.com/koichi.watanabe.984" title="プロフィール" id="">
-              <img class="header-prof-img" src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-1/p50x50/12227566_905194642902943_5476046247724179472_n.jpg?oh=4f264cd269cdd40a8080fd3b30471381&amp;oe=580B92C4" alt="" id="profile_pic_header">
-              <span class="">渡邊 晃一</span>
+              <%= image_tag current_user.avatar(:thumb), class: "header-prof-img"%>
+              <%= current_user.nickname %>
             </a>
           </li>
           <li>
