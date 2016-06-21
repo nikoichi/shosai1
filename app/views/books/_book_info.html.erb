@@ -35,16 +35,15 @@
 
     <div style="">
       <%= link_to 'Amazon 詳細ページへ',book.amazon_detail_url , class: "btn btn-default info-link-button"  %>
-      <% if current_page?(new_book_review_path(book)) %>
-        <%= link_to 'レビュー 一覧ページへ',book, method: :get, class: "btn btn-default info-link-button"  %>
-      <% else %>
-        <%= link_to 'レビューを書く',new_book_review_path(book), method: :get, class: "btn btn-default info-link-button"  %>
-      <% end %>
     </div>
 
     <div class="book-add-button-box">
-      <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
-        <span>読んだ本<br>に追加</span>
+      <% if current_page?(new_book_review_path(book)) %>
+        <%= link_to book, method: :get, class: "btn btn-default book-add-button" do %>
+        レビュー<br>一覧ページへ
+        <% end %>
+      <% else %>
+        <%= link_to 'レビューを書く',new_book_review_path(book), method: :get, class: "btn btn-default book-add-button"  %>
       <% end %>
     </div>
     <div class="book-add-button-box">

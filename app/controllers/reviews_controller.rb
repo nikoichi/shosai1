@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: :new
   def new
-    @book = Book.find(params[:book_id])
+    @book = Book.includes(:reviews).find(params[:book_id])
     @review = Review.new
   end
 

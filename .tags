@@ -104,20 +104,6 @@ rate-small50	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets
 .new-rate dd	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.new-rate dd{$/;"	function	line:62
 .new-review-contribute	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.new-review-contribute{$/;"	function	line:69
 .review-contribute-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/reviews.scss	/^.review-contribute-button{$/;"	function	line:76
-.book-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-title{$/;"	function	line:2
-.book-info-detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-detail{$/;"	function	line:8
-.book-info-left	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-left{$/;"	function	line:15
-.book-image-box2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image-box2{$/;"	function	line:23
-.book-image2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image2{$/;"	function	line:30
-.show-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate{$/;"	function	line:36
-.show-overall-rate-star	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-star{$/;"	function	line:42
-.show-overall-rate-val	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-val{$/;"	function	line:49
-.show-no-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-no-overall-rate{$/;"	function	line:57
-.book-info-right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-right{$/;"	function	line:64
-.authors-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.authors-box{$/;"	function	line:72
-.info-link-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.info-link-button{$/;"	function	line:77
-.book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:86
-.book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:93
 ApplicationController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	class	line:1
 after_sign_out_path_for	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^  def after_sign_out_path_for(resource)$/;"	method	line:7	class:ApplicationController
 configure_permitted_parameters	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/application_controller.rb	/^  def configure_permitted_parameters$/;"	method	line:11	class:ApplicationController
@@ -138,10 +124,6 @@ configure_permitted_parameters	/Users/watanabekouichi/Program/TECHCAMP/original/
 .show-top-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate{$/;"	function	line:54
 .show-top-rate-star	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate-star{$/;"	function	line:59
 .show-top-rate-val	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-index.scss	/^.show-top-rate-val{$/;"	function	line:66
-ReviewsController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	class	line:1
-new	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def new$/;"	method	line:3	class:ReviewsController
-create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create$/;"	method	line:8	class:ReviewsController
-create_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create_params$/;"	method	line:14	class:ReviewsController
 User	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/models/user.rb	/^class User < ActiveRecord::Base$/;"	class	line:1
 Review	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/models/review.rb	/^class Review < ActiveRecord::Base$/;"	class	line:1
 BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
@@ -170,3 +152,21 @@ header	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/style
 .header-prof-img	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.header-prof-img{$/;"	function	line:125
 .hedder-dropdown	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^.hedder-dropdown{$/;"	function	line:133
 footer	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books.scss	/^footer {$/;"	function	line:137
+ReviewsController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	class	line:1
+new	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def new$/;"	method	line:3	class:ReviewsController
+create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create$/;"	method	line:8	class:ReviewsController
+create_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create_params$/;"	method	line:14	class:ReviewsController
+.book-title	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-title{$/;"	function	line:2
+.book-info-detail	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-detail{$/;"	function	line:8
+.book-info-left	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-left{$/;"	function	line:15
+.book-image-box2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image-box2{$/;"	function	line:23
+.book-image2	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-image2{$/;"	function	line:30
+.show-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate{$/;"	function	line:36
+.show-overall-rate-star	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-star{$/;"	function	line:42
+.show-overall-rate-val	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-overall-rate-val{$/;"	function	line:49
+.show-no-overall-rate	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.show-no-overall-rate{$/;"	function	line:57
+.book-info-right	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-info-right{$/;"	function	line:64
+.authors-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.authors-box{$/;"	function	line:73
+.info-link-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.info-link-button{$/;"	function	line:78
+.book-add-button-box	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button-box{$/;"	function	line:88
+.book-add-button	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/book-info.scss	/^.book-add-button{$/;"	function	line:96

@@ -76,8 +76,7 @@
 }
 
 .info-link-button{
-  float: left;
-  width: 250px;
+  width: 270px;
   height: 30px;
   margin: 0 5px;
   line-height: 16px;
@@ -88,12 +87,17 @@
 
 .book-add-button-box{
   float: left;
+
   // height: 50px;
   width: 120px;
   margin: 5px;
 }
 
 .book-add-button{
+  display: table-cell;
+  vertical-align: middle;
+  height: 52px;
   width: 120px;
+  padding: 0;
   font-weight: bold;
 }
