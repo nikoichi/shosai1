@@ -168,7 +168,7 @@ show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/bo
 search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:16	class:BooksController
 ReviewsController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^class ReviewsController < ApplicationController$/;"	class	line:1
 new	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def new$/;"	method	line:4	class:ReviewsController
-create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create$/;"	method	line:9	class:ReviewsController
-edit	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^   def edit$/;"	method	line:14	class:ReviewsController
-update	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^   def update$/;"	method	line:20	class:ReviewsController
-review_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^    def review_params$/;"	method	line:27	class:ReviewsController
+create	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def create$/;"	method	line:15	class:ReviewsController
+edit	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^  def edit$/;"	method	line:20	class:ReviewsController
+update	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^   def update$/;"	method	line:31	class:ReviewsController
+review_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/reviews_controller.rb	/^    def review_params$/;"	method	line:38	class:ReviewsController

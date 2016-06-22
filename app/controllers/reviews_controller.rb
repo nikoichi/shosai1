@@ -2,8 +2,14 @@ class ReviewsController < ApplicationController
   before_action :authenticate_user!, only: :new
 
   def new
-    @book = Book.includes(:reviews).find(params[:book_id])
-    @review = Review.new
+    #既にレビューを書いている場合は編集画面へ遷移
+    @myreview = Review.find_by(book_id: params[:book_id], user_id: current_user.id)
+    if @myreview
+      redirect_to edit_book_review_path(params[:book_id],myreview.id)
+    else
+      @book = Book.includes(:reviews).find(params[:book_id])
+      @review = Review.new
+    end
   end
 
   def create
@@ -11,15 +17,20 @@ class ReviewsController < ApplicationController
     redirect_to book_path(params[:book_id]) # 書籍ページ(show)にリダイレクトする
   end
 
-   def edit
-    @book = Book.includes(:reviews).find(params[:book_id])
-    @review = Review.find(params[:id])
+  def edit
+    #レビューを書いていない場合はnewへリダイレクト
     @myreview = Review.find_by(book_id: params[:book_id], user_id: current_user.id)
-   end
+    unless @myreview
+      redirect_to new_book_review_path(params[:book_id])
+    else
+      @book = Book.includes(:reviews).find(params[:book_id])
+      @review = Review.find(@myreview.id)
+    end
+  end
 
    def update
-    review = Review.find(params[:id])
-    review.update(review_params)
+    @review = Review.find(params[:id])
+    @review.update(review_params)
     redirect_to book_path(params[:book_id]) # 書籍ページ(show)にリダイレクトする
    end
 

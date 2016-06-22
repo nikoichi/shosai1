@@ -50,6 +50,9 @@
           <% end %>
         </div>
         <div class="book-add-button-box">
+          <%= link_to 'レビューを削除',edit_book_review_path(book,@myreview.id), method: :get, class: "btn btn-default book-add-button"  %>
+        </div>
+        <div class="book-add-button-box">
           <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
             <span>おすすめの本<br>に追加</span>
           <% end %>
