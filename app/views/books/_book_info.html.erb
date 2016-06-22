@@ -41,7 +41,13 @@
       <!-- レビューを書いている場合:@myreviewがnilでない場合 -->
       <% if @myreview %>
         <div class="book-add-button-box">
+          <% if current_page?(edit_book_review_path(book,@myreview.id)) %>
+            <%= link_to book, method: :get, class: "btn btn-default book-add-button" do %>
+            レビュー<br>一覧ページへ
+            <% end %>
+          <% else %>
           <%= link_to 'レビューを編集',edit_book_review_path(book,@myreview.id), method: :get, class: "btn btn-default book-add-button"  %>
+          <% end %>
         </div>
         <div class="book-add-button-box">
           <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>
