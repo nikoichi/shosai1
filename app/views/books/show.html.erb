@@ -7,10 +7,18 @@
       <!-- <% reviews = Array.new(5) %> -->
       <% @reviews.each do |review| %>
         <div class="show-review-rate clearfix">
-          <div class="show-user">
-            投稿者：<%= review.user.nickname %>　初回投稿日：<%= review.created_at.strftime("%Y/%m/%d") %>
-            <% if review.created_at.strftime("%Y/%m/%d") != review.updated_at.strftime("%Y/%m/%d") %>
-             　最新編集日：<%= review.updated_at.strftime("%Y/%m/%d") %>
+          <div class="clearfix">
+            <div class="show-user">
+              投稿者：<%= review.user.nickname %>　初回投稿日：<%= review.created_at.strftime("%Y/%m/%d") %>
+              <% if review.created_at.strftime("%Y/%m/%d") != review.updated_at.strftime("%Y/%m/%d") %>
+               　最新編集日：<%= review.updated_at.strftime("%Y/%m/%d") %>
+              <% end %>
+            </div>
+            <% if @myreview && review.id == @myreview.id %>
+            <div class="show-edit">
+              <%= link_to '編集',edit_book_review_path(@book,@myreview.id), method: :get, style: "margin-right:5px;"  %>
+              <%= link_to '削除',"/books/#{@book.id}/reviews/#{@myreview.id}", method: :delete, class: "" , data: {confirm: '削除してもいいですか？'} , style: "margin-right:5px;" %>
+            </div>
             <% end %>
           </div>
           <div class="show-book-rate">

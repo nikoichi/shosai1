@@ -28,11 +28,19 @@ class ReviewsController < ApplicationController
     end
   end
 
-   def update
+  def update
     @review = Review.find(params[:id])
     @review.update(review_params)
     redirect_to book_path(params[:book_id]) # 書籍ページ(show)にリダイレクトする
-   end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    if @review.user_id == current_user.id
+      @review.destroy
+    end
+    redirect_to book_path(params[:book_id])
+  end
 
   private
     def review_params
