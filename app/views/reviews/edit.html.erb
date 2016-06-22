@@ -1,0 +1,92 @@
+<div class="contents clearfix">
+  <!-- 本情報の部分テンプレート -->
+  <%= render 'books/book_info', book: @book, reviews: @book.reviews %>
+
+  <%= form_for [@book, @review] do |f| %>
+  <div class="rate-contribute">
+    <h3 class="headline">◆評価</h3>
+    <div class="basic-rate-contribute">
+      <h4 class="rate-title">基本評価 (5段階評価)</h4>
+      <dl class="new-rate" style="background-color:mistyrose;">
+        <dt style="font-weight:bold;">総合評価</dt>
+        <dd><%= f.number_field :overall_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>人生を変えた</dt>
+        <dd><%= f.number_field :change_life_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>学びを得た</dt>
+        <dd><%= f.number_field :learning_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>共感できた</dt>
+        <dd><%= f.number_field :sympathy_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>面白い</dt>
+        <dd><%= f.number_field :interesting_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>感動した</dt>
+        <dd><%= f.number_field :impression_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+    </div>
+
+    <div class="generation-rate-contribute">
+      <h4 class="rate-title">世代別おすすめ度 (5段階評価)</h4>
+      <dl class="new-rate">
+        <dt>〜小学生</dt>
+        <dd><%= f.number_field :under_elementary_school_age_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>中学生</dt>
+        <dd><%= f.number_field :junior_high_school_student_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>高校生</dt>
+        <dd><%= f.number_field :high_school_student_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>大学生</dt>
+        <dd><%= f.number_field :university_student_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>〜20歳代</dt>
+        <dd><%= f.number_field :younger_20s_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>30〜40歳代</dt>
+        <dd><%= f.number_field :in_30s40s_rate, placeholder: '未評価', max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>50歳代〜</dt>
+        <dd><%= f.number_field :in_50s60s_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+      <dl class="new-rate">
+        <dt>退職後</dt>
+        <dd><%= f.number_field :after_retirement_rate, placeholder: '未評価',  max: 5, min: 1, step: 1, style: 'width: 65px; text-align: right;'  %></dd>
+      </dl>
+    </div>
+
+    <div class="trouble-rate-contribute">
+      <h4 class="rate-title">悩み評価</h4>
+
+    </div>
+  </div>
+
+  <div class="new-review-contribute clearfix">
+    <h3 class="headline">◆レビュー投稿</h3>
+    <div class="" style="margin: 0 20px">
+      <%= f.text_field :review_title, placeholder: 'レビューの見出しを記入', vstyle: 'width: 100%', maxlength:100 %>
+    </div>
+    <div class="" style="margin: 10px 20px">
+      <%= f.text_area :review, placeholder: 'レビューを記入', style: 'width: 100%;height: 300px;resize: none;' %>
+      <%= button_tag type: "submit", class: "btn btn-default review-contribute-button" do %>
+      <span>編集を投稿する</span>
+      <% end %>
+    </div>
+
+  </div>
+  <% end %>
+</div>
