@@ -7,15 +7,11 @@
     <!-- レートの星と数字の表示 -->
     <div class="show-overall-rate">
       <% if reviews.average(:overall_rate) %>
-        <% ave_overall_rate = reviews.average(:overall_rate)*2 %>
-        <% b = ave_overall_rate.round %>
-        <% a = b * 5 %>
-        <% c = a / 10.0 %>
         <div class="show-overall-rate-star">
-          <span class="rate rate<%= a %>"></span>
+          <span class="rate rate<%= @fundamental_rate_ave_stars[0] %>"></span>
         </div>
         <div class="show-overall-rate-val">
-          <span class=""><%= c %></span>
+          <span class=""><%= @fundamental_rate_ave_values[0] %></span>
         </div>
       <% else %>
         <% ave_overall_rate = "" %>

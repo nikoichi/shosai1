@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-   before_action :set_arrays
+  before_action :set_arrays
 
   def after_sign_out_path_for(resource)
     '/users/sign_in' # サインアウト後のリダイレクト先URL
@@ -20,12 +20,46 @@ class ApplicationController < ActionController::Base
     @generation_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"]
   end
 
-  def rate_ave_value
-
+  #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しい配列を返す。
+  def rate_ave_values_array(rates, reviews)
+    ary =[]
+    rates.each do |rate|
+      if reviews.average(rate)
+        ary << rate_ave_value(reviews.average(rate))
+      else
+        ary << nil
+      end
+    end
+    return ary
   end
 
-  def rate_ave_star
+  #1.0~5.0まで0.1きざみの値を返す。
+  def rate_ave_value(ave) #ave: 1.000~5.000
+    a = ave * 10 #a: 10.00~50.00
+    b = a.round #b: 10~50 _1きざみ
+    c = b / 10.0 #c: 1.0 ~5.0 _0.1きざみ
+    return c
+  end
 
+  #各rateに相当する位置に10~50まで5きざみの値が入った新しい配列を返す。
+  def rate_ave_stars_array(rates, reviews)
+    ary =[]
+    rates.each do |rate|
+      if reviews.average(rate)
+        ary << rate_ave_star(reviews.average(rate))
+      else
+        ary << nil
+      end
+    end
+    return ary
+  end
+
+  #10~50まで5きざみの値を返す。（cssの名前に合わせるため。）
+  def rate_ave_star(ave) #ave: 1.000~5.000
+    a = ave * 2 #a: 2.000~10.00
+    b = a.round #b: 2~10 _1きざみ
+    c = b * 5 # c: 10~50 _5きざみ
+    return c
   end
 
 end
