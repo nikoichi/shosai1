@@ -1,9 +1,10 @@
 class BooksController < ApplicationController
 
   def index
-    @recommendation_new_books = Book.includes(:reviews).limit(20).shuffle[0..4] #新着好評価(高評価上位20冊から5冊を表示
+    @recommendation_new_books = Book.includes(:reviews).limit(20).shuffle[0..4] #新着好評価(高評価上位20冊から5冊を表示)
     @recommendation_all_books = Book.includes(:reviews).limit(20).shuffle[0..4] #すべての本の高評価
     @recommendation_generation_books = Book.includes(:reviews).limit(20).shuffle[0..4] #世代別高評価
+    # add_overall_rate_ave(@recommendation_new_books)
   end
 
   def show
@@ -17,5 +18,13 @@ class BooksController < ApplicationController
 
   def search
     @books = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+  end
+
+  def add_overall_rate_ave(books)
+    books.each do |book|
+      book[:ave_value] = rate_ave_value(book.reviews.average(:overall_rate)) #bookに新たなハッシュの要素:ave_valueを追加。
+      book[:ave_star] = rate_ave_star(book.reviews.average(:overall_rate))
+      # book[:ave_value] = ave_value
+    end
   end
 end

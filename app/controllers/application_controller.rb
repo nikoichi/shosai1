@@ -22,53 +22,51 @@ class ApplicationController < ActionController::Base
 
   #各評価の平均値の配列を取得。
   def set_rate_ave_arrays(reviews)
-    @fundamental_rate_ave_values = rate_ave_values_array(@fundamental_rates, reviews)
-    @fundamental_rate_ave_stars = rate_ave_stars_array(@fundamental_rates, reviews)
-    @genetation_rate_ave_values = rate_ave_values_array(@generation_rates, reviews)
-    @generation_rate_ave_stars = rate_ave_stars_array(@generation_rates, reviews)
+    @fundamental_rate_ave_values = rate_ave_values_hash(@fundamental_rates, reviews)
+    @fundamental_rate_ave_stars = rate_ave_stars_hash(@fundamental_rates, reviews)
+    @genetation_rate_ave_values = rate_ave_values_hash(@generation_rates, reviews)
+    @generation_rate_ave_stars = rate_ave_stars_hash(@generation_rates, reviews)
   end
 
   #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しい配列を返す。
-  def rate_ave_values_array(rates, reviews)
+  def rate_ave_values_hash(rates, reviews)
     averages =[]
     rates.each do |rate|
-      if reviews.average(rate)
         averages << rate_ave_value(reviews.average(rate))
-      else
-        averages << nil
-      end
     end
     return averages_hash = Hash[*rates.zip(averages).flatten]
-    # return averages
   end
 
-  #1.0~5.0まで0.1きざみの値を返す。
+  #1.0~5.0まで0.1きざみの値を返す。aveがnilの場合はnilを返す。
   def rate_ave_value(ave) #ave: 1.000~5.000
-    a = ave * 10 #a: 10.00~50.00
-    b = a.round #b: 10~50 _1きざみ
-    c = b / 10.0 #c: 1.0 ~5.0 _0.1きざみ
+    if ave
+      a = ave * 10 #a: 10.00~50.00
+      b = a.round #b: 10~50 _1きざみ
+      c = b / 10.0 #c: 1.0 ~5.0 _0.1きざみ
+    else
+      c = nil
+    end
     return c
   end
 
   #各rateに相当する位置に10~50まで5きざみの値が入った新しい配列を返す。
-  def rate_ave_stars_array(rates, reviews)
+  def rate_ave_stars_hash(rates, reviews)
     averages =[]
     rates.each do |rate|
-      if reviews.average(rate)
         averages << rate_ave_star(reviews.average(rate))
-      else
-        averages << nil
-      end
     end
     return averages_hash = Hash[*rates.zip(averages).flatten]
-    # return averages
   end
 
-  #10~50まで5きざみの値を返す。（cssの名前に合わせるため。）
+  #10~50まで5きざみの値を返す。（cssの名前に合わせるため。）aveがnilの場合はnilを返す。
   def rate_ave_star(ave) #ave: 1.000~5.000
-    a = ave * 2 #a: 2.000~10.00
-    b = a.round #b: 2~10 _1きざみ
-    c = b * 5 # c: 10~50 _5きざみ
+    if ave
+      a = ave * 2 #a: 2.000~10.00
+      b = a.round #b: 2~10 _1きざみ
+      c = b * 5 # c: 10~50 _5きざみ
+    else
+      c = nil
+    end
     return c
   end
 

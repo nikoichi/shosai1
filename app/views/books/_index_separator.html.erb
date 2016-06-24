@@ -1,7 +1,7 @@
 <div class="recommendation-content">
   <div class="recommendation-header">
     <a class="recommendation-link link-hover-blue" href="#">
-      <strong class="recommendation-title"> <%= rate_names[0] %> </strong>
+      <strong class="recommendation-title"> <%= rate_name %> </strong>
       <span class="recommendation-detail">›ランキングを見る</span>
     </a>
     <div class="dropdown recommendation-right-dropdown">
@@ -9,7 +9,7 @@
         <span class="">評価内容を変える▼</span>
       </a>
       <ul class="dropdown-menu" role="menu">
-        <% rate_names[1..rate_names.length].each do |rate_name| %>
+        <% names.each do |rate_name| %>
           <li><a href="#"><%= rate_name %></a></li>
         <% end %>
       </ul>
