@@ -1,6 +1,7 @@
 <dd>
   <% if rate %>
-  <span class="rate-small rate-small<%= rate.round %>"></span>
+    <% rate *= 10 if rate < 10 %> <%# rateが10以下のとき(10~50に変換されていなくて、1~5のままのとき)10倍する。 %>
+    <span class="rate-small rate-small<%= rate.round %>"></span>
   <% else %><span class="show-no-rate">無評価</span>
   <% end %>
 </dd>
