@@ -4,7 +4,7 @@
     <div class="book-image-box2">
       <%= link_to book do image_tag(book.book_img_url , :class =>"book-image2") end %>
     </div>
-    <!-- レートの星と数字の表示 -->
+    <%# レートの星と数字の表示 %>
     <div class="show-overall-rate">
       <% if @fundamental_rate_ave_values[0] %>
         <div class="show-overall-rate-star">
@@ -84,6 +84,9 @@
         </div>
       <% end %>
     </div>
-    <%= render 'books/book_rate_box', book: book, reviews: reviews, fundamental_rate_stars: @fundamental_rate_ave_stars, generation_rate_stars: @generation_rate_ave_stars %>
+    <h4 style="margin-top:5px;font-weight:bold;">【評価平均】</h4>
+    <div class="clearfix" style="margin:5px;">
+      <%= render 'books/book_rate_box', book: book, reviews: reviews, fundamental_rate_stars: fundamental_rate_stars, generation_rate_stars: generation_rate_stars %>
+    </div>
   </div>
 </div>

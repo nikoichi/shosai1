@@ -1,6 +1,6 @@
 <div class="contents clearfix">
-  <!-- 本情報の部分テンプレート -->
-  <%= render 'books/book_info', book: @book, reviews: @reviews  %>
+  <%# 本情報の部分テンプレート %>
+  <%= render 'books/book_info', book: @book, reviews: @reviews, fundamental_rate_stars: @fundamental_rate_ave_stars, generation_rate_stars: @generation_rate_ave_stars %>
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
@@ -28,8 +28,8 @@
               <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
               <dl class="show-rate" style="background-color:mistyrose;">
                 <dt style="font-weight:bold;">総合評価</dt>
-                <% if review.overall_rate %>
-                  <% rate = review.overall_rate * 10 %>
+                <% if review[:overall_rate] %>
+                  <% rate = review[:overall_rate] * 10 %>
                 <% else rate  = nil %>
                 <% end %>
                 <%= render 'books/rate_small', rate: rate %>
