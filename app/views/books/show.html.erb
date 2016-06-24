@@ -4,7 +4,6 @@
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
-      <!-- <% reviews = Array.new(5) %> -->
       <% @reviews.each do |review| %>
         <div class="show-review-rate clearfix">
           <div class="clearfix">
@@ -14,6 +13,7 @@
                　最新編集日：<%= review.updated_at.strftime("%Y/%m/%d") %>
               <% end %>
             </div>
+            <%# 自分のレビューの場合のみ「編集」「削除」を表示 %>
             <% if @myreview && review.id == @myreview.id %>
             <div class="show-edit">
               <%= link_to '編集',edit_book_review_path(@book,@myreview.id), method: :get, style: "margin-right:5px;"  %>

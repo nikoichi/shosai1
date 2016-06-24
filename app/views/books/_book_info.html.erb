@@ -6,7 +6,7 @@
     </div>
     <!-- レートの星と数字の表示 -->
     <div class="show-overall-rate">
-      <% if reviews.average(:overall_rate) %>
+      <% if @fundamental_rate_ave_values[0] %>
         <div class="show-overall-rate-star">
           <span class="rate rate<%= @fundamental_rate_ave_stars[0] %>"></span>
         </div>
@@ -14,7 +14,6 @@
           <span class=""><%= @fundamental_rate_ave_values[0] %></span>
         </div>
       <% else %>
-        <% ave_overall_rate = "" %>
         <span class="show-no-overall-rate">まだ評価はありません。</span>
       <% end %>
     </div>
@@ -37,7 +36,7 @@
     </div>
 
     <div class="clearfix">
-      <!-- レビューを書いている場合:@myreviewがnilでない場合 -->
+      <%# レビューを書いている場合:@myreviewがnilでない場合 %>
       <% if @myreview %>
         <div class="book-add-button-box">
           <% if current_page?(edit_book_review_path(book,@myreview.id)) %>
@@ -57,7 +56,7 @@
           <% end %>
         </div>
 
-      <!-- レビューを書いていない場合 -->
+      <%# レビューを書いていない場合 %>
       <% else %>
         <div class="book-add-button-box">
           <% if current_page?(new_book_review_path(book)) %>
@@ -85,46 +84,6 @@
         </div>
       <% end %>
     </div>
-
-    <div class="show-book-rate" style="margin:5px;">
-      <!-- 基本評価テーブル -->
-      <div class="show-basic-rate-contribute">
-        <h4 class="show-rate-title">評価平均【基本評価】</h4>
-        <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
-        <% if reviews.average(:overall_rate) %>
-          <% rate = reviews.average(:overall_rate)*2.round/2 *10 %>
-          <% else rate = nil %>
-        <% end %>
-          <dl class="show-rate" style="background-color:mistyrose;">
-            <dt style="font-weight:bold;">総合評価</dt>
-            <%= render 'books/rate_small', rate: rate %>
-          </dl>
-        <%# 総合評価以外の基本レート %>
-        <% @fundamental_names.zip(@fundamental_rates)[1..5].each do |review_name, review_column| %>
-          <dl class="show-rate">
-            <dt><%= review_name %></dt>
-            <% if reviews.average(review_column) %>
-              <% rate = reviews.average(review_column)*2.round/2 *10 %>
-              <% else rate = nil %>
-            <% end %>
-            <%= render 'books/rate_small', rate: rate %>
-          </dl>
-        <% end %>
-      </div>
-      <%# 世代別評価テーブル %>
-      <div class="show-generation-rate-contribute">
-        <h4 class="show-rate-title">評価平均【世代別おすすめ】</h4>
-        <% @generation_names.zip(@generation_rates).each do |generation_name, generation_rate| %>
-          <dl class="show-rate">
-            <dt><%= generation_name %></dt>
-            <% if reviews.average(generation_rate) %>
-              <% rate = reviews.average(generation_rate)*2.round/2 *10 %>
-              <% else rate = nil %>
-            <% end %>
-            <%= render 'books/rate_small', rate: rate %>
-          </dl>
-        <% end %>
-      </div>
-    </div>
+    <%= render 'books/book_rate_box', book: book, reviews: reviews  %>
   </div>
 </div>
