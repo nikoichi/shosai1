@@ -9,8 +9,7 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @reviews = Review.includes(:user).where(book_id: params[:id]).order(updated_at: :desc)#レビューを編集の最新順に表示されるように並び替え
-    @fundamental_rate_ave_values = rate_ave_values_array(@fundamental_rates, @reviews)
-    @fundamental_rate_ave_stars = rate_ave_stars_array(@fundamental_rates, @reviews)
+    set_rate_ave_arrays(@reviews) #各評価の平均値の配列を取得。
     if user_signed_in? #サインインしている場合のみ@myreviewにセット。
       @myreview = Review.find_by(book_id: params[:id], user_id: current_user.id)
     end

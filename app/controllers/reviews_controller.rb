@@ -8,8 +8,7 @@ class ReviewsController < ApplicationController
       redirect_to edit_book_review_path(params[:book_id],myreview.id)
     else
       @reviews = Review.where(book_id: params[:book_id])
-      @fundamental_rate_ave_values = rate_ave_values_array(@fundamental_rates, @reviews)
-      @fundamental_rate_ave_stars = rate_ave_stars_array(@fundamental_rates, @reviews)
+      set_rate_ave_arrays(@reviews) #各評価の平均値の配列を取得。
       @book = Book.includes(:reviews).find(params[:book_id])
       @review = Review.new
     end
@@ -27,8 +26,7 @@ class ReviewsController < ApplicationController
       redirect_to new_book_review_path(params[:book_id])
     else
       @reviews = Review.where(book_id: params[:book_id])
-      @fundamental_rate_ave_values = rate_ave_values_array(@fundamental_rates, @reviews)
-      @fundamental_rate_ave_stars = rate_ave_stars_array(@fundamental_rates, @reviews)
+      set_rate_ave_arrays(@reviews) #各評価の平均値の配列を取得。
       @book = Book.includes(:reviews).find(params[:book_id])
       @review = Review.find(@myreview.id)
     end

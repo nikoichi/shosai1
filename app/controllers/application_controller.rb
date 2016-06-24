@@ -20,6 +20,14 @@ class ApplicationController < ActionController::Base
     @generation_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"]
   end
 
+  #各評価の平均値の配列を取得。
+  def set_rate_ave_arrays(reviews)
+    @fundamental_rate_ave_values = rate_ave_values_array(@fundamental_rates, reviews)
+    @fundamental_rate_ave_stars = rate_ave_stars_array(@fundamental_rates, reviews)
+    @genetation_rate_ave_values = rate_ave_values_array(@generation_rates, reviews)
+    @generation_rate_ave_stars = rate_ave_stars_array(@generation_rates, reviews)
+  end
+
   #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しい配列を返す。
   def rate_ave_values_array(rates, reviews)
     ary =[]
