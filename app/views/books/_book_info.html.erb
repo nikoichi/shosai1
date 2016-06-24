@@ -6,12 +6,12 @@
     </div>
     <%# レートの星と数字の表示 %>
     <div class="show-overall-rate">
-      <% if @fundamental_rate_ave_values[0] %>
+      <% if fundamental_rate_values[:overall_rate] %>
         <div class="show-overall-rate-star">
-          <span class="rate rate<%= @fundamental_rate_ave_stars[0] %>"></span>
+          <span class="rate rate<%= fundamental_rate_stars[:overall_rate] %>"></span>
         </div>
         <div class="show-overall-rate-val">
-          <span class=""><%= @fundamental_rate_ave_values[0] %></span>
+          <span class=""><%= fundamental_rate_values[:overall_rate] %></span>
         </div>
       <% else %>
         <span class="show-no-overall-rate">まだ評価はありません。</span>

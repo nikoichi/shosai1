@@ -30,15 +30,16 @@ class ApplicationController < ActionController::Base
 
   #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しい配列を返す。
   def rate_ave_values_array(rates, reviews)
-    ary =[]
+    averages =[]
     rates.each do |rate|
       if reviews.average(rate)
-        ary << rate_ave_value(reviews.average(rate))
+        averages << rate_ave_value(reviews.average(rate))
       else
-        ary << nil
+        averages << nil
       end
     end
-    return ary
+    return averages_hash = Hash[*rates.zip(averages).flatten]
+    # return averages
   end
 
   #1.0~5.0まで0.1きざみの値を返す。
@@ -51,15 +52,16 @@ class ApplicationController < ActionController::Base
 
   #各rateに相当する位置に10~50まで5きざみの値が入った新しい配列を返す。
   def rate_ave_stars_array(rates, reviews)
-    ary =[]
+    averages =[]
     rates.each do |rate|
       if reviews.average(rate)
-        ary << rate_ave_star(reviews.average(rate))
+        averages << rate_ave_star(reviews.average(rate))
       else
-        ary << nil
+        averages << nil
       end
     end
-    return ary
+    return averages_hash = Hash[*rates.zip(averages).flatten]
+    # return averages
   end
 
   #10~50まで5きざみの値を返す。（cssの名前に合わせるため。）
