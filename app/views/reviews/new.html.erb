@@ -1,6 +1,6 @@
 <div class="contents clearfix">
   <!-- 本情報の部分テンプレート -->
-  <%= render 'books/book_info', book: @book, reviews: @book.reviews %>
+  <%= render 'books/book_info', book: @book, reviews: @reviews, fundamental_rate_stars: @fundamental_rate_ave_stars, generation_rate_stars: @generation_rate_ave_stars,fundamental_rate_values: @fundamental_rate_ave_values %>
 
   <%= form_for [@book, @review] do |f| %>
   <div class="rate-contribute">

@@ -1,10 +1,9 @@
 <div class="contents clearfix">
-  <!-- 本情報の部分テンプレート -->
-  <%= render 'books/book_info', book: @book, reviews: @reviews  %>
+  <%# 本情報の部分テンプレート %>
+  <%= render 'books/book_info', book: @book, reviews: @reviews, fundamental_rate_stars: @fundamental_rate_ave_stars, generation_rate_stars: @generation_rate_ave_stars,fundamental_rate_values: @fundamental_rate_ave_values %>
 
   <div class="reviews-container">
     <h3 class="headline">◆評価・レビュー</h3>
-      <!-- <% reviews = Array.new(5) %> -->
       <% @reviews.each do |review| %>
         <div class="show-review-rate clearfix">
           <div class="clearfix">
@@ -14,6 +13,7 @@
                　最新編集日：<%= review.updated_at.strftime("%Y/%m/%d") %>
               <% end %>
             </div>
+            <%# 自分のレビューの場合のみ「編集」「削除」を表示 %>
             <% if @myreview && review.id == @myreview.id %>
             <div class="show-edit">
               <%= link_to '編集',edit_book_review_path(@book,@myreview.id), method: :get, style: "margin-right:5px;"  %>
@@ -21,50 +21,7 @@
             </div>
             <% end %>
           </div>
-          <div class="show-book-rate">
-            <!-- 基本評価テーブル -->
-            <div class="show-basic-rate-contribute">
-              <h4 class="show-rate-title">基本評価 (5段階評価)</h4>
-              <!-- 総合評価レートの表示。（太字、背景色が異なるので分けた） -->
-              <dl class="show-rate" style="background-color:mistyrose;">
-                <dt style="font-weight:bold;">総合評価</dt>
-                <% if review.overall_rate %>
-                  <% rate = review.overall_rate * 10 %>
-                <% else rate  = nil %>
-                <% end %>
-                <%= render 'books/rate_small', rate: rate %>
-              </dl>
-              <!-- 総合評価以外の基本レート -->
-              <% rate_names = ["人生を変えた", "学びを得た", "共感できた", "面白い", "感動した" ] %>
-              <% review_columns = [review.change_life_rate, review.learning_rate, review.sympathy_rate, review.interesting_rate, review.impression_rate] %>
-              <% rate_names.zip(review_columns).each do |review_name, review_column| %>
-                <dl class="show-rate">
-                  <dt><%= review_name %></dt>
-                  <% if review_column %>
-                    <% rate = review_column * 10 %>
-                  <% else rate  = nil %>
-                  <% end %>
-                  <%= render 'books/rate_small', rate: rate %>
-                </dl>
-              <% end %>
-            </div>
-            <!-- 世代別評価テーブル -->
-            <div class="show-generation-rate-contribute">
-              <h4 class="show-rate-title">世代別おすすめ度 (5段階評価)</h4>
-              <% rate_names = ["〜小学生", "中学生", "高校生", "大学生", "〜20歳代", "30〜40歳代", "50歳〜", "退職後"] %>
-              <% review_columns = [review.under_elementary_school_age_rate, review.junior_high_school_student_rate, review.high_school_student_rate, review.university_student_rate, review.younger_20s_rate, review.in_30s40s_rate, review.in_50s60s_rate, review.after_retirement_rate] %>
-              <% rate_names.zip(review_columns).each do |review_name, review_column| %>
-                <dl class="show-rate">
-                  <dt><%= review_name %></dt>
-                  <% if review_column %>
-                    <% rate = review_column * 10 %>
-                  <% else rate  = nil %>
-                  <% end %>
-                  <%= render 'books/rate_small', rate: rate %>
-                </dl>
-              <% end %>
-            </div>
-          </div>
+          <%= render 'books/book_rate_box',  fundamental_rate_stars: review, generation_rate_stars: review %>
           <div class="show-book-review">
             <h4 class="show-review-title"><%= review.review_title %></h4>
             <div class="show-review">

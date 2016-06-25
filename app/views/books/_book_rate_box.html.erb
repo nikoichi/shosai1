@@ -1,0 +1,31 @@
+<div class="show-book-rate">
+  <%# 基本評価テーブル %>
+  <div class="show-basic-rate-contribute">
+    <h4 class="show-rate-title">基本評価</h4>
+    <%# 総合評価以外の基本レート %>
+    <% @fundamental_names.zip(@fundamental_rates).each do |fundamental_name, fundamental_rate| %>
+      <%# 総合評価の場合のみ太字、背景色が異なるので分けた %>
+      <% if fundamental_name == "総合評価" %>
+        <dl class="show-rate" style="background-color:mistyrose;">
+          <dt style="font-weight:bold;"><%= fundamental_name %></dt>
+          <%= render 'books/rate_small', rate: fundamental_rate_stars[fundamental_rate] %>
+        </dl>
+      <% else %>
+        <dl class="show-rate">
+          <dt><%= fundamental_name %></dt>
+          <%= render 'books/rate_small', rate: fundamental_rate_stars[fundamental_rate] %>
+        </dl>
+      <% end %>
+    <% end %>
+  </div>
+  <%# 世代別評価テーブル %>
+  <div class="show-generation-rate-contribute">
+    <h4 class="show-rate-title">世代別おすすめ度</h4>
+    <% @generation_names.zip(@generation_rates).each do |generation_name, generation_rate| %>
+      <dl class="show-rate">
+        <dt><%= generation_name %></dt>
+        <%= render 'books/rate_small', rate: generation_rate_stars[generation_rate] %>
+      </dl>
+    <% end %>
+  </div>
+</div>
