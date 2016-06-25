@@ -21,18 +21,18 @@ class ApplicationController < ActionController::Base
   end
 
   #各評価の平均値の配列を取得。
-  def set_rate_ave_arrays(reviews)
+  def set_rate_ave_hashs(reviews)
     @fundamental_rate_ave_values = rate_ave_values_hash(@fundamental_rates, reviews)
     @fundamental_rate_ave_stars = rate_ave_stars_hash(@fundamental_rates, reviews)
     @genetation_rate_ave_values = rate_ave_values_hash(@generation_rates, reviews)
     @generation_rate_ave_stars = rate_ave_stars_hash(@generation_rates, reviews)
   end
 
-  #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しい配列を返す。
+  #各rateに相当する位置に1.0~5.0まで0.1きざみの値が入った新しいハッシュを返す。
   def rate_ave_values_hash(rates, reviews)
     averages =[]
     rates.each do |rate|
-        averages << rate_ave_value(reviews.average(rate))
+      averages << rate_ave_value(reviews.average(rate))
     end
     return averages_hash = Hash[*rates.zip(averages).flatten]
   end
@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
     return c
   end
 
-  #各rateに相当する位置に10~50まで5きざみの値が入った新しい配列を返す。
+  #各rateに相当する位置に10~50まで5きざみの値が入った新しいハッシュを返す。
   def rate_ave_stars_hash(rates, reviews)
     averages =[]
     rates.each do |rate|

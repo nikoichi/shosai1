@@ -15,23 +15,21 @@
       </ul>
     </div>
   </div>
-  <% books.each do |book|%>
+  <% books.zip(averages).each do |book, average|%>
     <div class="book-image-box1">
       <%= link_to book do image_tag( book.book_img_url ) end %>
-      <!-- レートの星と数字の表示 -->
+      <%# レートの星と数字の表示 %>
       <div class="show-top-rate">
-        <!-- overall_rateiに評価がある場合のみ星表示 -->
-        <% if book.reviews.average(:overall_rate) %>
-          <% ave_rate = book.reviews.average(:overall_rate)*2.round/2 *10 %>
+        <%# overall_rateiに評価がある場合のみ星表示 %>
+        <% if average[:ave_value] %>
             <div class="show-top-rate-star">
-              <span class="rate-small rate-small<%= ave_rate.round %>"></span>
+              <span class="rate-small rate-small<%= average[:ave_star] %>"></span>
             </div>
             <div class="show-top-rate-val">
-              <span class=""><%= ave_rate /10 %></span>
+              <span class=""><%= average[:ave_value] %></span>
             </div>
         <% end %>
       </div>
-
     </div>
   <% end %>
 </div>
