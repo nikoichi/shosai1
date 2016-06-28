@@ -34,8 +34,8 @@ class BooksController < ApplicationController
         @fundamental_rate_ave_stars_array << @fundamental_rate_ave_stars
         @genetation_rate_ave_values_array << @genetation_rate_ave_values
         @generation_rate_ave_stars_array << @generation_rate_ave_stars
-        if user_signed_in? #サインインしている場合のみ@myreviewにセット。
-          @myreview = Review.find_by(book_id: params[:id], user_id: current_user.id)
+        if user_signed_in? #サインインしていてレビューを書いている場合に@myreviewにセット。その他はnil。
+          @myreview = Review.find_by(book_id: book.id, user_id: current_user.id)
         else
           @myreview = nil
         end
