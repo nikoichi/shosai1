@@ -36,19 +36,19 @@
     </div>
 
     <div class="clearfix">
-      <%# レビューを書いている場合:@myreviewがnilでない場合 %>
-      <% if @myreview %>
+      <%# レビューを書いている場合:myreviewがnilでない場合 %>
+      <% if myreview %>
         <div class="book-add-button-box">
-          <% if current_page?(edit_book_review_path(book,@myreview.id)) %>
+          <% if current_page?(edit_book_review_path(book,myreview.id)) %>
             <%= link_to book, method: :get, class: "btn btn-default book-add-button" do %>
             レビュー<br>一覧ページへ
             <% end %>
           <% else %>
-          <%= link_to 'レビューを編集',edit_book_review_path(book,@myreview.id), method: :get, class: "btn btn-default book-add-button" %>
+          <%= link_to 'レビューを編集',edit_book_review_path(book,myreview.id), method: :get, class: "btn btn-default book-add-button" %>
           <% end %>
         </div>
         <div class="book-add-button-box">
-          <%= link_to 'レビューを削除',"/books/#{book.id}/reviews/#{@myreview.id}", method: :delete, class: "btn btn-default book-add-button" , data: {confirm: '削除してもいいですか？'}  %>
+          <%= link_to 'レビューを削除',"/books/#{book.id}/reviews/#{myreview.id}", method: :delete, class: "btn btn-default book-add-button" , data: {confirm: '削除してもいいですか？'}  %>
         </div>
         <div class="book-add-button-box">
           <%= button_tag type: "submit", class: "btn btn-default book-add-button" do %>

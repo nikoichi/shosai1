@@ -20,7 +20,28 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @books = Book.includes(:reviews).where('book_title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    if @books
+      @fundamental_rate_ave_values_array = []
+      @fundamental_rate_ave_stars_array = []
+      @genetation_rate_ave_values_array = []
+      @generation_rate_ave_stars_array = []
+      @myreviews = []
+
+      @books.each do |book|
+        set_rate_ave_hashs(book.reviews)
+        @fundamental_rate_ave_values_array << @fundamental_rate_ave_values
+        @fundamental_rate_ave_stars_array << @fundamental_rate_ave_stars
+        @genetation_rate_ave_values_array << @genetation_rate_ave_values
+        @generation_rate_ave_stars_array << @generation_rate_ave_stars
+        if user_signed_in? #サインインしている場合のみ@myreviewにセット。
+          @myreview = Review.find_by(book_id: params[:id], user_id: current_user.id)
+        else
+          @myreview = nil
+        end
+        @myreviews << @myreview
+      end
+    end
   end
 
   #各本のレート平均値を取得し、ハッシュの配列を返す。
