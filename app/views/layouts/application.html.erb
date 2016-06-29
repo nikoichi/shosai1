@@ -11,12 +11,10 @@
   <header>
     <nav class="shosainav">
 
-      <!-- ヘッダー左側 -->
+      <%# ヘッダー左側 %>
       <div class="left-nav">
         <div class="header-top-link">
-          <a href="http://localhost:3000/" class="header-link shosai-text">
-            <span>書斎</span>
-          </a>
+          <%= link_to '書斎', root_path, class: "header-link shosai-text" %>
         </div>
 
         <div class="">
@@ -28,7 +26,7 @@
           <% end %>
         </div>
       </div>
-      <!-- ヘッダー右側 -->
+      <%# ヘッダー右側 %>
       <div class="right-nav">
         <ul class="right-nav-list">
           <% if user_signed_in? %>
