@@ -2,7 +2,6 @@
   <%# 基本評価テーブル %>
   <div class="show-basic-rate-contribute">
     <h4 class="show-rate-title">基本評価</h4>
-    <%# 総合評価以外の基本レート %>
     <% @fundamental_names.zip(@fundamental_rates).each do |fundamental_name, fundamental_rate| %>
       <%# 総合評価の場合のみ太字、背景色が異なるので分けた %>
       <% if fundamental_name == "総合評価" %>

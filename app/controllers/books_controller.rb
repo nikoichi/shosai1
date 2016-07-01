@@ -48,7 +48,7 @@ class BooksController < ApplicationController
   def set_rate_ave(books)
     averages = []
     books.each do |book|
-      averages << {:ave_value => rate_ave_value(book.reviews.average(:overall_rate)), :ave_star => rate_ave_star(book.reviews.average(:overall_rate))}
+      averages << {:ave_value => rate_ave_value(book.reviews.where.not("overall_rate" => 0).average(:overall_rate)), :ave_star => rate_ave_star(book.reviews.where.not("overall_rate" => 0).average(:overall_rate))}
     end
     return averages
   end
