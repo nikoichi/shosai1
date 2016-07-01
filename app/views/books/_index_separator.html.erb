@@ -21,7 +21,7 @@
       <%# レートの星と数字の表示 %>
       <div class="show-top-rate">
         <%# overall_rateiに評価がある場合のみ星表示 %>
-        <% if average[:ave_value] %>
+        <% if average[:ave_value] && average[:ave_value] != 0 %>
             <div class="show-top-rate-star">
               <span class="rate-small rate-small<%= average[:ave_star] %>"></span>
             </div>

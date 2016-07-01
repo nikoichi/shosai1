@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   def rate_ave_values_hash(rates, reviews)
     averages =[]
     rates.each do |rate|
-      averages << rate_ave_value(reviews.average(rate))
+      averages << rate_ave_value(reviews.where.not(rate.to_s => 0).average(rate)) #平均を算出する際に、0の評価を除いた。rateはシンボルなのでto_sメソッドで文字列化し、notメソッドを適用。
     end
     return averages_hash = Hash[*rates.zip(averages).flatten]
   end
@@ -53,7 +53,7 @@ class ApplicationController < ActionController::Base
   def rate_ave_stars_hash(rates, reviews)
     averages =[]
     rates.each do |rate|
-        averages << rate_ave_star(reviews.average(rate))
+      averages << rate_ave_star(reviews.where.not(rate.to_s => 0).average(rate))  #平均を算出する際に、0の評価を除いた。rateはシンボルなのでto_sメソッドで文字列化し、notメソッドを適用。
     end
     return averages_hash = Hash[*rates.zip(averages).flatten]
   end

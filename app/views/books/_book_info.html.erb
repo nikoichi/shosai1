@@ -6,7 +6,7 @@
     </div>
     <%# レートの星と数字の表示 %>
     <div class="show-overall-rate">
-      <% if fundamental_rate_values[:overall_rate] %>
+      <% if fundamental_rate_values[:overall_rate] && fundamental_rate_values[:overall_rate] != 0 %>
         <div class="show-overall-rate-star">
           <span class="rate rate<%= fundamental_rate_stars[:overall_rate] %>"></span>
         </div>
