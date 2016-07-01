@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     #既にレビューを書いている場合は編集画面へ遷移
     @myreview = Review.find_by(book_id: params[:book_id], user_id: current_user.id)
     if @myreview
-      redirect_to edit_book_review_path(params[:book_id],myreview.id)
+      redirect_to edit_book_review_path(params[:book_id],@myreview.id)
     else
       @reviews = Review.where(book_id: params[:book_id])
       set_rate_ave_hashs(@reviews) #各評価の平均値のハッシュを取得。
