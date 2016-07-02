@@ -21,6 +21,13 @@ class BooksController < ApplicationController
 
   def search
     @books = Book.includes(:reviews).where('book_title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+    #以下、検索結果件数表示
+    @number = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").length  #検索件数を取得
+    @page = params[:page].to_i
+    @page = 1 if @books.first_page? #1ページのみparams[:page]がnilとなるので、最初のページの場合は1となるようにした。
+    @view_start_num = (@page-1)*10 + 1
+    @view_end_num = @page*10
+    @view_end_num = @number if @books.last_page?  #最後のページは検索件数まで表示
 
     #全ての本において平均を配列で取得するための処理を実施。
     if @books

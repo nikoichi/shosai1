@@ -1,7 +1,12 @@
 <div class="contents clearfix">
+  <div class="result">
+    <span>検索結果 <%= @number %>件中 <%= @view_start_num %>−<%= @view_end_num %>件</span>
+  </div>
   <% @books.zip(@fundamental_rate_ave_stars_array, @generation_rate_ave_stars_array, @fundamental_rate_ave_values_array, @myreviews).each do |book, fundamental_rate_ave_stars, generation_rate_ave_stars, fundamental_rate_ave_values, myreview| %>
     <%# 本情報の部分テンプレート %>
     <%= render 'books/book_info', book: book, fundamental_rate_stars: fundamental_rate_ave_stars, generation_rate_stars: generation_rate_ave_stars,fundamental_rate_values: fundamental_rate_ave_values, myreview: myreview %>
   <% end %>
-  <%= paginate(@books) %>
+  <div class="paginate">
+    <%= paginate(@books) %>
+  </div>
 </div>
