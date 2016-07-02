@@ -20,16 +20,19 @@ class BooksController < ApplicationController
 
   def search
     @books = Book.includes(:reviews).where('book_title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
-    #以下、検索結果件数表示
-    set_paginate_values(@books)
+    #検索結果件数取得
+    @number = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").length  #検索件数を取得
+    set_paginate_values(@books, @number)
     set_ave_arrays(@books)
   end
 
   def ranking
-    book_ids = Review.group(:book_id).order('average_overall_rate DESC').average(:overall_rate).keys
-    @books = book_ids.map{|id| Book.find(id)}.page(params[:page]).per(10)
-    #以下、検索結果件数表示
-    set_paginate_values(@books)
+    #@book_pageは、kaminariで使用するための変数
+    @book_page = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').page(params[:page]).per(10)
+    book_ids = @book_page.average(:overall_rate).keys
+    @books = book_ids.map{|id| Book.find(id)} #ランキングに表示順の配列を取得。ここでは配列にしてしまっているので、kaminariのメソッドは使用できない。
+    @number = book_ids.length #ランキングに表示する本の件数取得
+    set_paginate_values(@book_page, @number)
     set_ave_arrays(@books)
   end
 
@@ -42,13 +45,12 @@ class BooksController < ApplicationController
     return averages
   end
 
-  def set_paginate_values(books)
-    @number = Book.where('book_title LIKE(?)', "%#{params[:keyword]}%").length  #検索件数を取得
+  def set_paginate_values(books, number)
     @page = params[:page].to_i
     @page = 1 if books.first_page? #1ページのみparams[:page]がnilとなるので、最初のページの場合は1となるようにした。
     @view_start_num = (@page-1)*10 + 1
     @view_end_num = @page*10
-    @view_end_num = @number if books.last_page?  #最後のページは検索件数まで表示
+    @view_end_num = number if books.last_page?  #最後のページは検索件数まで表示
   end
 
   #全ての本において平均を配列で取得するための処理を実施。

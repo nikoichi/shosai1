@@ -1,16 +1,12 @@
 <div class="contents clearfix">
-  <% @books.each do |book| %>
-    <div class="book-info-detail">
-      <h2 class="book-title"><%= book.book_title %></h2>
-      <div class="book-info-left">
-        <div class="book-image-box2">
-          <%= image_tag(book.book_img_url , :class =>"book-image2") %>
-        </div>
-      </div>
-      <div class="book-info-right">
-
-      </div>
-
-    </div>
+  <div class="result">
+    <span>検索結果 <%= @number %>件中 <%= @view_start_num %>−<%= @view_end_num %>件</span>
+  </div>
+  <% @books.zip(@fundamental_rate_ave_stars_array, @generation_rate_ave_stars_array, @fundamental_rate_ave_values_array, @myreviews).each do |book, fundamental_rate_ave_stars, generation_rate_ave_stars, fundamental_rate_ave_values, myreview| %>
+    <%# 本情報の部分テンプレート %>
+    <%= render 'books/book_info', book: book, fundamental_rate_stars: fundamental_rate_ave_stars, generation_rate_stars: generation_rate_ave_stars,fundamental_rate_values: fundamental_rate_ave_values, myreview: myreview %>
   <% end %>
+  <div class="paginate">
+    <%= paginate(@book_page) %>
+  </div>
 </div>
