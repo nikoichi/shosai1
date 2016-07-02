@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :reviews, only: [:new, :create, :edit, :update, :destroy]
     collection do
       get 'search'
+      get 'ranking'
     end
   end
 end
