@@ -20,7 +20,9 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = Book.includes(:reviews).where('book_title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @books = Book.includes(:reviews).where('book_title LIKE(?)', "%#{params[:keyword]}%").page(params[:page]).per(10)
+
+    #全ての本において平均を配列で取得するための処理を実施。
     if @books
       @fundamental_rate_ave_values_array = []
       @fundamental_rate_ave_stars_array = []
