@@ -1,8 +1,15 @@
 <div class="contents clearfix">
   <div class="result">
-    <span>検索結果 <%= @number %>件中 <%= @view_start_num %>−<%= @view_end_num %>件</span>
+    <span>【総合評価】ランキング <%= @number %>件中 <%= @view_start_num %>位−<%= @view_end_num %>位</span>
   </div>
+  <%# 先頭の本の順位をセット %>
+  <% rank = @view_start_num %>
   <% @books.zip(@fundamental_rate_ave_stars_array, @generation_rate_ave_stars_array, @fundamental_rate_ave_values_array, @myreviews).each do |book, fundamental_rate_ave_stars, generation_rate_ave_stars, fundamental_rate_ave_values, myreview| %>
+    <div class="ranking">
+      <span><%= rank %>位</span>
+    </div>
+      <%# 次の本の順位をセット %>
+    <% rank += 1 %>
     <%# 本情報の部分テンプレート %>
     <%= render 'books/book_info', book: book, fundamental_rate_stars: fundamental_rate_ave_stars, generation_rate_stars: generation_rate_ave_stars,fundamental_rate_values: fundamental_rate_ave_values, myreview: myreview %>
   <% end %>
