@@ -1,9 +1,9 @@
 <div class="recommendation-content">
   <div class="recommendation-header">
-    <a class="recommendation-link link-hover-blue" href="#">
+      <%= link_to ranking_books_path, class: "recommendation-link link-hover-blue" do %>
       <strong class="recommendation-title"> <%= rate_name %> </strong>
       <span class="recommendation-detail">›ランキングを見る</span>
-    </a>
+      <% end %>
     <div class="dropdown recommendation-right-dropdown">
       <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="">評価内容を変える▼</span>
