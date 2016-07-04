@@ -5,13 +5,10 @@
   <%# 先頭の本の順位をセット %>
   <% rank = @view_start_num %>
   <% @books.zip(@fundamental_rate_ave_stars_array, @generation_rate_ave_stars_array, @fundamental_rate_ave_values_array, @myreviews).each do |book, fundamental_rate_ave_stars, generation_rate_ave_stars, fundamental_rate_ave_values, myreview| %>
-    <div class="ranking">
-      <span><%= rank %>位</span>
-    </div>
-      <%# 次の本の順位をセット %>
-    <% rank += 1 %>
     <%# 本情報の部分テンプレート %>
-    <%= render 'books/book_info', book: book, fundamental_rate_stars: fundamental_rate_ave_stars, generation_rate_stars: generation_rate_ave_stars,fundamental_rate_values: fundamental_rate_ave_values, myreview: myreview %>
+    <%= render 'books/book_info', book: book, fundamental_rate_stars: fundamental_rate_ave_stars, generation_rate_stars: generation_rate_ave_stars,fundamental_rate_values: fundamental_rate_ave_values, myreview: myreview, rank: rank %>
+    <%# 次の本の順位をセット %>
+    <% rank += 1 %>
   <% end %>
   <div class="paginate">
     <%= paginate(@book_page) %>
