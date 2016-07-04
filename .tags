@@ -177,9 +177,9 @@ review_params	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/contr
 .ranking	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/assets/stylesheets/books-search-ranking.scss	/^.ranking{$/;"	function	line:21
 BooksController	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^class BooksController < ApplicationController$/;"	class	line:1
 index	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def index$/;"	method	line:3	class:BooksController
-show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:13	class:BooksController
-search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:22	class:BooksController
-ranking	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def ranking$/;"	method	line:30	class:BooksController
-set_rate_ave	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_rate_ave(books)$/;"	method	line:41	class:BooksController
-set_paginate_values	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_paginate_values(books, number)$/;"	method	line:49	class:BooksController
-set_ave_arrays	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_ave_arrays(books)$/;"	method	line:58	class:BooksController
+show	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def show$/;"	method	line:18	class:BooksController
+search	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def search$/;"	method	line:27	class:BooksController
+ranking	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def ranking$/;"	method	line:35	class:BooksController
+set_rate_ave	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_rate_ave(books)$/;"	method	line:46	class:BooksController
+set_paginate_values	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_paginate_values(books, number)$/;"	method	line:54	class:BooksController
+set_ave_arrays	/Users/watanabekouichi/Program/TECHCAMP/original/shosai1/app/controllers/books_controller.rb	/^  def set_ave_arrays(books)$/;"	method	line:63	class:BooksController

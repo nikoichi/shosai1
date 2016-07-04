@@ -1,11 +1,17 @@
 class BooksController < ApplicationController
 
   def index
-    @recommendation_new_books = Book.includes(:reviews).limit(20).shuffle[0..4] #新着好評価(高評価上位20冊から5冊を表示)
+    #新着好評価(高評価上位10冊から5冊)の表示
+    recommendation_new_books_ids = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').limit(10).average(:overall_rate).keys
+    @recommendation_new_books = recommendation_new_books_ids.map{|id| Book.find(id)}.shuffle[0..4] #新着好評価(高評価上位10冊から5冊)の取得
     @recommendation_new_books_rate_averages = set_rate_ave(@recommendation_new_books) #新着好評価5冊の平均値を取得。
-    @recommendation_all_books = Book.includes(:reviews).limit(20).shuffle[0..4] #すべての本の高評価
+    #好評価(高評価上位10冊から5冊)の表示
+    recommendation_all_books_ids = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').limit(10).average(:overall_rate).keys
+    @recommendation_all_books = recommendation_all_books_ids.map{|id| Book.find(id)}.shuffle[0..4]  #好評価(高評価上位10冊から5冊)の取得
     @recommendation_all_books_rate_averages = set_rate_ave(@recommendation_all_books) #5冊の平均値を取得。
-    @recommendation_generation_books = Book.includes(:reviews).limit(20).shuffle[0..4] #世代別高評価
+    #世代別高評価(高評価上位10冊から5冊)の表示
+    recommendation_generation_books_ids = Review.where.not("younger_20s_rate" => 0).group(:book_id).order('younger_20s_rate DESC').limit(10).average(:younger_20s_rate).keys
+    @recommendation_generation_books = recommendation_generation_books_ids.map{|id| Book.find(id)}.shuffle[0..4] #世代別高評価(高評価上位10冊から5冊)の取得
     @recommendation_generation_books_rate_averages = set_rate_ave(@recommendation_generation_books) #5冊の平均値を取得。
   end
 
