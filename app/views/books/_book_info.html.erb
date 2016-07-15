@@ -1,6 +1,7 @@
 <div class="book-info-detail clearfix">
+  <%# ランキングの時の順位表示 %>
   <% if current_page?(ranking_books_path) %>
-  <h2 class="ranking"><%= rank %>位</h2>
+    <h2 class="ranking"><%= rank %>位</h2>
   <% end %>
   <h2 class="book-title"><%= book.book_title %></h2>
   <div class="book-info-left">
