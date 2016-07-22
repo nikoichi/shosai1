@@ -8,14 +8,14 @@
     <div class="book-image-box2">
       <%= link_to book do image_tag(book.book_img_url , :class =>"book-image2") end %>
     </div>
-    <%# レートの星と数字の表示 %>
+    <%# レートの星と数字の表示（総合評価を表示） %>
     <div class="show-overall-rate">
-      <% if fundamental_rate_values[:overall_rate] && fundamental_rate_values[:overall_rate] != 0 %>
+      <% if fundamental_rate_values[@view_rate] && fundamental_rate_values[@view_rate] != 0 #評価が存在するかどうか %>
         <div class="show-overall-rate-star">
-          <span class="rate rate<%= fundamental_rate_stars[:overall_rate] %>"></span>
+          <span class="rate rate<%= fundamental_rate_stars[@view_rate] %>"></span>
         </div>
         <div class="show-overall-rate-val">
-          <span class=""><%= fundamental_rate_values[:overall_rate] %></span>
+          <span class=""><%= fundamental_rate_values[@view_rate] %></span>
         </div>
       <% else %>
         <span class="show-no-overall-rate">まだ評価はありません。</span>

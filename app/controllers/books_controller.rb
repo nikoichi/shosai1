@@ -2,8 +2,8 @@ class BooksController < ApplicationController
 
   def index
     #インデックスで表示する名前の配列の作成。
-    params[:view_rates] ? view_rates = params[:view_rates] : view_rates = [] #params[:view_rates]がnilの場合は空の配列をセットしてエラーを防ぐ。
-    @rate_names = ["-新着- 高評価の本【#{@fundamental_names[view_rates[0].to_i]}】", "高評価の本【#{@fundamental_names[view_rates[1].to_i]}】", "世代別おすすめの本【#{@generation_names[view_rates[2].to_i]}】"]
+    params[:view_rates] ? @view_rates = params[:view_rates] : @view_rates = [] #params[:view_rates]がnilの場合は空の配列をセットしてエラーを防ぐ。
+    @rate_names = ["-新着- 高評価の本【#{@fundamental_names[@view_rates[0].to_i]}】", "高評価の本【#{@fundamental_names[@view_rates[1].to_i]}】", "世代別おすすめの本【#{@generation_names[@view_rates[2].to_i]}】"]
 
     #新着好評価(高評価上位10冊から5冊)の表示
     recommendation_new_books_ids = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').limit(10).average(:overall_rate).keys
@@ -87,5 +87,6 @@ class BooksController < ApplicationController
       end
     end
   end
+
 
 end

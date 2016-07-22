@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_arrays
+  before_action :set_arrays, :set_view_rate
 
   def after_sign_out_path_for(resource)
     '/users/sign_in' # サインアウト後のリダイレクト先URL
@@ -68,6 +68,20 @@ class ApplicationController < ActionController::Base
       c = nil
     end
     return c
+  end
+
+
+  def set_view_rate
+    if params[:view_fund_rate]
+      @view_rate = @fundamental_rates[params[:view_fund_rate].to_i]
+      @view_name = @fundamental_names[params[:view_fund_rate].to_i]
+    elsif params[:view_gene_rate]
+      @view_rate = @generation_rates[params[:view_gene_rate].to_i]
+      @view_name = @generation_names[params[:view_gene_rate].to_i]
+    else
+      @view_rate = :overall_rate
+      @view_name = "総合評価"
+    end
   end
 
 end
