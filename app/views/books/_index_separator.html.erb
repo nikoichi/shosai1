@@ -1,7 +1,7 @@
 <div class="recommendation-content">
   <div class="recommendation-header">
       <%= link_to ranking_books_path, class: "recommendation-link link-hover-blue" do %>
-      <strong class="recommendation-title"> <%= rate_name %> </strong>
+      <strong class="recommendation-title"> <%= @rate_names[num] %> </strong>
       <span class="recommendation-detail">›ランキングを見る</span>
       <% end %>
     <div class="dropdown recommendation-right-dropdown">
@@ -9,9 +9,14 @@
         <span class="">評価内容を変える▼</span>
       </a>
       <ul class="dropdown-menu" role="menu">
-        <% names.each do |rate_name| %>
-          <li><a href="#"><%= rate_name %></a></li>
-        <% end %>
+      <% names.each_with_index do |name, i| %>
+        <li>
+          <%# params[:view_rates]が存在する場合はview_ratesにセット、存在しない場合は空の配列をセットし、エラーを防ぐ。 %>
+          <% params[:view_rates] ? view_rates = params[:view_rates] : view_rates = [] %>
+          <% view_rates[num] = i %>
+          <%= link_to "#{name}", root_path(:view_rates => view_rates ) %>
+        </li>
+      <% end %>
       </ul>
     </div>
   </div>

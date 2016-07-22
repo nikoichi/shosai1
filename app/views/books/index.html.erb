@@ -1,13 +1,11 @@
 <div class="contents clearfix">
   <!-- 新着の評価が高評価 -->
-  <% rate_name = "-新着- 高評価の本【総合評価】" %>
-  <%= render 'books/index_separator',rate_name: rate_name, names: @fundamental_names, books: @recommendation_new_books, averages: @recommendation_new_books_rate_averages %>
+  <%# params[:view_rates][0] == "0" unless params[:view_rates]  %>
+  <%= render 'books/index_separator',num: 0, names: @fundamental_names, books: @recommendation_new_books, averages: @recommendation_new_books_rate_averages %>
 
   <!-- 全図書の評価が高評価 -->
-  <% rate_name = "高評価の本【総合評価】" %>
-  <%= render 'books/index_separator',rate_name: rate_name, names: @fundamental_names, books: @recommendation_all_books, averages: @recommendation_all_books_rate_averages %>
+  <%= render 'books/index_separator',num: 1, names: @fundamental_names, books: @recommendation_all_books, averages: @recommendation_all_books_rate_averages %>
 
   <!-- 年代別おすすめ -->
-  <% rate_name = "世代別おすすめの本【社会人(〜20代)】" %>
-  <%= render 'books/index_separator',rate_name: rate_name, names: @generation_names, books: @recommendation_generation_books, averages: @recommendation_generation_books_rate_averages %>
+  <%= render 'books/index_separator',num: 2, names: @generation_names, books: @recommendation_generation_books, averages: @recommendation_generation_books_rate_averages %>
 </div>
