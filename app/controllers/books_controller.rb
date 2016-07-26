@@ -2,8 +2,8 @@ class BooksController < ApplicationController
 
   def index
     #インデックスで表示する名前の配列の作成。
-    params[:view_rates] ? view_rates = params[:view_rates] : view_rates = [] #params[:view_rates]がnilの場合は空の配列をセットしてエラーを防ぐ。
-    @rate_names = ["-新着- 高評価の本【#{@fundamental_names[view_rates[0].to_i]}】", "高評価の本【#{@fundamental_names[view_rates[1].to_i]}】", "世代別おすすめの本【#{@generation_names[view_rates[2].to_i]}】"]
+    params[:view_rates] ? @view_rates = params[:view_rates] : @view_rates = [] #params[:view_rates]がnilの場合は空の配列をセットしてエラーを防ぐ。
+    @rate_names = ["-新着- 高評価の本【#{@fundamental_names[@view_rates[0].to_i]}】", "高評価の本【#{@fundamental_names[@view_rates[1].to_i]}】", "世代別おすすめの本【#{@generation_names[@view_rates[2].to_i]}】"]
 
     #新着好評価(高評価上位10冊から5冊)の表示
     recommendation_new_books_ids = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').limit(10).average(:overall_rate).keys
@@ -38,10 +38,10 @@ class BooksController < ApplicationController
 
   def ranking
     #@book_pageは、kaminariで使用するための変数→すべてのレビューから評価0とnilを除外し、本ごとにまとめてoverall_rateの平均値順に並べ、kaminariのメソッドを適用。
-    @book_page = Review.where.not("overall_rate" => 0).group(:book_id).order('average_overall_rate DESC').page(params[:page]).per(10)
-    book_ids = @book_page.average(:overall_rate).keys #ここの順番は直感的でない。averageを適用すると平均のハッシュとなってしまうのでその前にkaminariのメソッドを記述。
+    @book_page = Review.where.not(@view_rate => 0).group(:book_id).order("average_#{@view_rate} DESC").page(params[:page]).per(10)
+    book_ids = @book_page.average(@view_rate).keys #ここの順番は直感的でない。averageを適用すると平均のハッシュとなってしまうのでその前にkaminariのメソッドを記述。
     @books = book_ids.map{|id| Book.find(id)} #ランキングに表示順の配列を取得。ここでは配列にしてしまっているので、kaminariのメソッドは使用できない。
-    @number = Review.where.not("overall_rate" => 0).group(:book_id).length #ランキングに表示する本の件数取得
+    @number = Review.where.not(@view_rate => 0).group(:book_id).length #ランキングに表示する本の件数取得
     set_paginate_values(@book_page, @number)
     set_ave_hash_arrays(@books)
   end
@@ -87,5 +87,6 @@ class BooksController < ApplicationController
       end
     end
   end
+
 
 end

@@ -1,6 +1,5 @@
 <div class="contents clearfix">
   <!-- 新着の評価が高評価 -->
-  <%# params[:view_rates][0] == "0" unless params[:view_rates]  %>
   <%= render 'books/index_separator',num: 0, names: @fundamental_names, books: @recommendation_new_books, averages: @recommendation_new_books_rate_averages %>
 
   <!-- 全図書の評価が高評価 -->

@@ -1,9 +1,17 @@
 <div class="recommendation-content">
   <div class="recommendation-header">
-      <%= link_to ranking_books_path, class: "recommendation-link link-hover-blue" do %>
+    <%# num=2のときは世代別の評価なので、ランキングに遷移する場合世代別ということが分かるようにview_gene_rate:という名前で渡す。 %>
+    <% if num == 2 %>
+      <%= link_to ranking_books_path(view_gene_rate: @view_rates[num]), class: "recommendation-link link-hover-blue" do %>
       <strong class="recommendation-title"> <%= @rate_names[num] %> </strong>
       <span class="recommendation-detail">›ランキングを見る</span>
       <% end %>
+    <% else %>
+      <%= link_to ranking_books_path(view_fund_rate: @view_rates[num]), class: "recommendation-link link-hover-blue" do %>
+      <strong class="recommendation-title"> <%= @rate_names[num] %> </strong>
+      <span class="recommendation-detail">›ランキングを見る</span>
+      <% end %>
+    <% end %>
     <div class="dropdown recommendation-right-dropdown">
       <a href="#" class="" data-toggle="dropdown" role="button" aria-expanded="false">
         <span class="">評価内容を変える▼</span>
@@ -11,10 +19,9 @@
       <ul class="dropdown-menu" role="menu">
       <% names.each_with_index do |name, i| %>
         <li>
-          <%# params[:view_rates]が存在する場合はview_ratesにセット、存在しない場合は空の配列をセットし、エラーを防ぐ。 %>
-          <% params[:view_rates] ? view_rates = params[:view_rates] : view_rates = [] %>
-          <% view_rates[num] = i %>
-          <%= link_to "#{name}", root_path(:view_rates => view_rates ) %>
+          <%# @view_ratesは前の状態を保持した変数。下記で各評価に応じたリンクを生成 %>
+          <% @view_rates[num] = i %>
+          <%= link_to "#{name}", root_path(:view_rates => @view_rates ) %>
         </li>
       <% end %>
       </ul>
