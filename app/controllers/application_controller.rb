@@ -70,7 +70,7 @@ class ApplicationController < ActionController::Base
     return c
   end
 
-
+  #すべてのアクションで@view_rateと@view_nameをセット。ランキングへのアクセスの際のみ、params[:view_fund_rate]かparams[:view_gene_rate]がセットされており、それに応じた表示となる。
   def set_view_rate
     if params[:view_fund_rate]
       @view_rate = @fundamental_rates[params[:view_fund_rate].to_i]
